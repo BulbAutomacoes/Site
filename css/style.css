@@ -52,7 +52,7 @@ body {
   content: "";
   width: 40px;
   height: 7px;
-  background-color: #f1db25;
+  background-color: #FF0000;
   border-radius: 10px;
   position: absolute;
   bottom: 0;
@@ -147,8 +147,10 @@ body {
 }
 
 .header_top {
-  background-color: #1c1c1c;
-  padding: 15px 0;
+  /*background-color: #D9D9D9;
+  background-color: #101010;*/
+  background-color: #FFFFFF;
+  padding: 0 0;
 }
 
 .header_top .contact_link-container {
@@ -167,13 +169,14 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: #ffffff;
+  color: #101010;
+  /*color: #FFFFFF;*/
   font-size: 15px;
 }
 
 .header_top .contact_link-container a i {
   font-size: 20px;
-  color: #f1db25;
+  color: #FF0000;
   margin-right: 5px;
 }
 
@@ -193,17 +196,16 @@ body {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 0;
-  padding: 35px 15px 10px 15px;
-  color: #ffffff;
-  text-align: center;
-  text-transform: uppercase;
-  -webkit-transition: all .2s;
-  transition: all .2s;
+  color: #fff; /* Cor do texto */
+  border: 2px solid transparent; /* Sem contorno inicial */
+  padding: 10px 20px; /* Ajuste de tamanho */
+  cursor: pointer;
+  transition: border 0.2s ease; /* Suavização da transição */
 }
 
 .custom_nav-container .navbar-nav .nav-item:hover .nav-link, .custom_nav-container .navbar-nav .nav-item.active .nav-link {
-  background-color: #1c1c1c;
+  border-color: red; /* Cor do contorno no hover */
+  background-color: #1c1c1c; /* Mantém o fundo original */
 }
 
 a,
@@ -339,7 +341,7 @@ a:focus {
 }
 
 .slider_section .detail-box h1 span {
-  color: #f1db25;
+  color: #FF0000;
 }
 
 .slider_section .detail-box p {
@@ -354,7 +356,7 @@ a:focus {
 }
 
 .slider_section .detail-box .btn-box a {
-  width: 180px;
+  width: 350px;
   text-align: center;
   margin: 5px;
 }
@@ -378,7 +380,7 @@ a:focus {
 .slider_section .detail-box .btn-box .btn-2 {
   display: inline-block;
   padding: 10px 35px;
-  background-color: #f1db25;
+  background-color: #FF0000;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -387,8 +389,8 @@ a:focus {
 
 .slider_section .detail-box .btn-box .btn-2:hover {
   background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
+  border-color: #FF0000;
+  color: #FF0000;
 }
 
 .slider_section .img-box {
@@ -418,7 +420,7 @@ a:focus {
   height: 20px;
   border-radius: 100%;
   text-align: center;
-  background-color: #f1db25;
+  background-color: #FF0000;
   opacity: 1;
   border: none;
   margin: 0 4px;
@@ -454,7 +456,7 @@ a:focus {
 .about_section .detail-box a {
   display: inline-block;
   padding: 10px 35px;
-  background-color: #f1db25;
+  background-color: #FF0000;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -464,8 +466,8 @@ a:focus {
 
 .about_section .detail-box a:hover {
   background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
+  border-color: #FF0000;
+  color: #FF0000;
 }
 
 .service_section {
@@ -505,7 +507,7 @@ a:focus {
 .service_section .box .detail-box a {
   display: inline-block;
   padding: 8px 35px;
-  background-color: #f1db25;
+  background-color: #FF0000;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -515,8 +517,8 @@ a:focus {
 
 .service_section .box .detail-box a:hover {
   background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
+  border-color: #FF0000;
+  color: #FF0000;
 }
 
 .client_section {
@@ -601,7 +603,7 @@ a:focus {
 
 .client_section .carousel-control-prev:hover,
 .client_section .carousel-control-next:hover {
-  background-color: #f1db25;
+  background-color: #FF0000;
 }
 
 .client_section .carousel-control-prev {
@@ -677,7 +679,7 @@ a:focus {
 .contact_section .contact_form-container button {
   display: inline-block;
   padding: 10px 60px;
-  background-color: #f1db25;
+  background-color: #FF0000;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -688,8 +690,8 @@ a:focus {
 
 .contact_section .contact_form-container button:hover {
   background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
+  border-color: #FF0000;
+  color: #FF0000;
 }
 
 .contact_bg_box {
@@ -776,7 +778,7 @@ a:focus {
 .team_section .btn-box a {
   display: inline-block;
   padding: 10px 45px;
-  background-color: #f1db25;
+  background-color: #FF0000;
   color: #ffffff;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -785,8 +787,8 @@ a:focus {
 
 .team_section .btn-box a:hover {
   background-color: transparent;
-  border-color: #f1db25;
-  color: #f1db25;
+  border-color: #FF0000;
+  color: #FF0000;
 }
 
 .info_section {
@@ -872,7 +874,7 @@ a:focus {
   outline: none;
   border: none;
   color: #ffffff;
-  background: #f1db25;
+  background: #FF0000;
   border-radius: 30px;
   margin-top: 15px;
   text-transform: uppercase;
