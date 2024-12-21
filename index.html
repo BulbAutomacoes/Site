@@ -61,7 +61,7 @@
         <div class="container-fluid">
           <nav class="navbar navbar-expand-lg custom_nav-container">
             <a class="navbar-brand" href="index.html">
-              <span style="font-size: calc(1.5rem + 0.5vw);">
+              <span style="font-size: 0.9rem;">
                 Com a Bulb, tecnologia não é cara.
               </span>
             </a>
@@ -516,27 +516,28 @@
   target="_blank" 
   style="
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.5rem;
+    right: 1.5rem;
     background-color: #25d366;
     color: white;
-    width: 60px;
-    height: 60px;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1);
     text-decoration: none;
     z-index: 1000;
   "
+  id="whatsapp-button"
 >
   <svg 
     xmlns="http://www.w3.org/2000/svg" 
     viewBox="0 0 32 32" 
     style="
-      width: 30px; 
-      height: 30px; 
+      width: 1.8rem; 
+      height: 1.8rem; 
       fill: white;
     "
   >
@@ -545,28 +546,39 @@
 </a>
 
 <script>
-  // Responsividade com ajuste automático do botão
-  function adjustButtonSize() {
-    const button = document.querySelector('a[target="_blank"]');
+  function adjustButtonPosition() {
+    const button = document.getElementById('whatsapp-button');
     const screenWidth = window.innerWidth;
 
-    if (screenWidth <= 480) { // Dispositivos pequenos
-      button.style.width = '50px';
-      button.style.height = '50px';
-      button.style.bottom = '15px';
-      button.style.right = '15px';
-    } else { // Dispositivos maiores
-      button.style.width = '60px';
-      button.style.height = '60px';
-      button.style.bottom = '20px';
-      button.style.right = '20px';
+    if (screenWidth <= 480) { // Para dispositivos móveis
+
+      button.style.right = '1rem'; // Ajusta a posição para dentro da viewport
+      button.style.bottom = '1rem';
+      button.style.width = '3rem'; // Reduz o tamanho do botão
+      button.style.height = '3rem';
+      
+
+    } else { // Para telas maiores
+
+      button.style.right = '1.5rem';
+      button.style.bottom = '1.5rem';
+      button.style.width = '3.5rem';
+      button.style.height = '3.5rem';
+      
+
     }
   }
 
-  // Chamar função ao carregar e redimensionar a janela
-  window.onload = adjustButtonSize;
-  window.onresize = adjustButtonSize;
+  // Ajusta o botão ao carregar e ao redimensionar a janela
+  window.onload = adjustButtonPosition;
+  window.onresize = adjustButtonPosition;
 </script>
+
+
+
+
+
+
 
   <!--Botão Whataapp Fim-->
   <!-- info section -->
