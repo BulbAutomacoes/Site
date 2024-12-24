@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .email-form {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+        .email-form h2 {
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .email-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        .email-form input,
+        .email-form textarea,
+        .email-form button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+        }
+        .email-form button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .email-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="email-form">
+    <h2>Enviar Email</h2>
+    <!-- modify this form HTML and place wherever you want your form -->
+<form
+action="https://formspree.io/f/mvggpnyd"
+method="POST"
+>
+<label>
+  Your email:
+  <input type="email" name="email">
+</label>
+<label>
+    <label>
+        ramo:
+        <input type="text" name="ramo">
+      </label>
+      <label>
+        <label>
+           Estou interessado em::
+            <input type="text" name="interesse">
+          </label>
+          <label>
+  Your message:
+  <textarea name="message"></textarea>
+</label>
+<!-- your other form fields go here -->
+<button type="submit">Send</button>
+</form>
+</div>
+
+</body>
+</html>
