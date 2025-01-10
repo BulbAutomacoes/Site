@@ -88,6 +88,25 @@
           }
       }
 
+      /* Ajuste para reduzir o espaço entre os parágrafos e o conteúdo */
+      .detail-box p {
+        margin-bottom: 1rem; /* Reduzir o espaço abaixo do parágrafo */
+      }
+
+      /* Ajuste para reduzir o espaço adicional no bloco */
+      .col-md-6.px-0 {
+        margin-bottom: 1rem; /* Ajusta o espaço entre as colunas */
+      }
+
+      /* Ajuste de padding na div de detalhe */
+      .detail-box {
+        padding-bottom: 1.5rem; /* Reduz o padding abaixo do conteúdo */
+      }
+
+      /* Ajuste do espaçamento entre a última coluna e o botão */
+      .btn-box {
+        margin-top: 0.5rem; /* Reduz o espaço entre o parágrafo e o botão */
+      }
   </style>
   
   <!--Style popup fim-->
@@ -298,140 +317,19 @@
       fill: white;
     "
   >
-    <path d="M16.003 3A12.942 12.942 0 0 0 3 16c0 2.293.614 4.533 1.777 6.489L3 29l6.648-1.735A12.94 12.94 0 0 0 16.003 29c7.18 0 13-5.82 13-13s-5.82-13-13-13zm0 2C22.076 5 27 9.923 27 16c0 6.075-4.924 11-10.997 11a10.89 10.89 0 0 1-5.438-1.44l-.393-.234-3.946 1.03.806-3.604-.247-.382A10.938 10.938 0 0 1 5 16c0-6.077 4.923-11 10.997-11zm-2.462 6a1 1 0 0 0-.712.324c-.278.301-.689.762-.834 1.178-.193.571-.305 1.248.461 2.5.761 1.244 1.194 1.688 2.12 2.61.926.923 1.63 1.42 2.852 1.888 1.22.467 1.875.393 2.548.25.662-.138 1.533-.7 1.753-1.387.22-.688.22-1.28.155-1.387-.065-.108-.247-.174-.516-.305-.27-.13-1.592-.788-1.84-.876-.25-.088-.43-.13-.61.131-.183.263-.703.875-.862 1.052-.157.175-.312.195-.581.065-.268-.131-1.126-.418-2.143-1.33-.792-.689-1.33-1.54-1.492-1.808-.163-.263-.017-.408.113-.54.122-.12.273-.313.41-.47.138-.157.184-.262.28-.435.094-.175.044-.327-.022-.455-.066-.13-.59-1.411-.812-1.95-.21-.527-.426-.46-.593-.467z"/>
+    <path d="M16.003 3A12.942 12.942 0 0 0 3 16c0 2.293.614 4.533 1.777 6.489L3 29l6.648-1.735A12.94 12.94 0 0 0 16.003 29c7.18 0 13-5.82 13-13s-5.82-13-13-13zm0 2C22.076 5 27 9.923 27 16c0 6.075-4.924 11-10.997 11a10.89 10.89 0 0 1-5.438-1.44l-.393-.234-3.946 1.03.806-3.604-.247-.382A10.938 10.938 0 0 1 5 16c0-6.077 4.923-11 10.997-11zm-2.462 6a1 1 0 0 0-.712.324c-.278.301-.689.762-.834 1.178-.193.571-.305 1.248.461 2.5.761 1.244 1.194 1.688 2.12 2.61.926.923 1.63 1.42 2.852 1.888 1.22.467 1.875.393 2.548.25.662-.138 1.533-.7 1.753-1.387.22-.688.22-1.28.155-1.387-.065-.108-.247-.174-.516-.305-.27-.13-1.592-.788-1.84-.876-.25-.088-.43-.13-.61.131-.183.263-.703.875-.862 1.052-.157.175-.312.195-.581.065-.268-.131-1.126-.418-2.143-1.33-.792-.689-1.33-1.54-1.492-1.808-.163-.263-.017-.408.113-.54.122-.12.273-.225.551-.36.08-.1.207-.24.3-.443.08-.1.213-.206.413-.305z"></path>
   </svg>
 </a>
 
-<script>
-  function adjustButtonPosition() {
-    const button = document.getElementById('whatsapp-button');
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 480) { // Para dispositivos móveis
-
-      button.style.right = '1rem'; // Ajusta a posição para dentro da viewport
-      button.style.bottom = '1rem';
-      button.style.width = '3rem'; // Reduz o tamanho do botão
-      button.style.height = '3rem';
-      
-
-    } else { // Para telas maiores
-
-      button.style.right = '1.5rem';
-      button.style.bottom = '1.5rem';
-      button.style.width = '3.5rem';
-      button.style.height = '3.5rem';
-      
-
-    }
-  }
-
-  // Ajusta o botão ao carregar e ao redimensionar a janela
-  window.onload = adjustButtonPosition;
-  window.onresize = adjustButtonPosition;
-</script>
-
-
-
-
-
-
-
-  <!--Botão Whataapp Fim-->
-  <!-- info section -->
-  <section class="info_section ">
+  <!--footer-->
+  <footer class="footer_section">
     <div class="container">
-      <div class="row">
-        <div class="col-md-3">
-          <div class="info_info">
-            <h5>
-              Redes Sociais
-            </h5>
-          </div>
-          <div class="info_contact">
-                <a><span href="https://www.linkedin.com/company/bulbautomacoes" class="">Linkedin: Bulb Automações</span><br>
-                <span href="https://www.instagram.com/bulbautomacoes?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" class="">Instagram: @bulbautomacoes</span></a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_links">
-            <h5>
-              Contatos
-            </h5>
-            <ul>
-              <li>
-          <a href="https://wa.me/+5511948798009" class="">
-            <i class="fa fa-phone" aria-hidden="true"></i>
-            <span>
-              +55 (11) 94879-8009    
-            </span>
-          </a>
-          <br> <!-- Quebra de linha -->
-          <a href="mailto:contato@bulbautomacoes.com.br?subject=Quero%20Automatizar" class="">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <span style="font-size: 0.84rem;">
-              contato@bulbautomacoes.com.br
-            </span>
-          </a>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_info">
-            <h5>
-              Endereço
-            </h5>
-          </div>
-          <div class="info_contact">
-            <a class="">
-              <i class="fa fa-map-marker" aria-hidden="true"></i>
-              <span>
-                Avenida Paulista, São Paulo.
-                <br>
-                1106 - Sala 01 - 16º andar
-              </span>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-3">
-          <div class="info_form ">
-            <h5>
-              Sugestões
-            </h5>
-            <form
-            action="https://formspree.io/f/mvggpnyd"
-            method="POST"
-            >
-              <input type="text" placeholder="Digite sua sugestão"><br><br>
-              <input type="email" name="Email" placeholder="Digite seu e-mail " />
-              <button type="submit">
-                Enviar
-              </button>
-            </form>
-            
-          </div>
-        </div>
+      <div class="footer-logo">
+        <a href="index.html"><img src="images/Logo2.png" alt="logo"></a>
       </div>
+      <p>© 2025 Todos os direitos reservados</p>
     </div>
-  </section>
-
-  <!-- end info_section -->
-
-
-
-
-  <!-- footer section -->
-  <footer class="container-fluid footer_section">
-    <p>
-      &copy; <span id="currentYear"></span> All Rights Reserved. Design by
-      <a>Bulb Tecnologias</a>
-    </p>
   </footer>
-  <!-- footer section -->
-
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
-  <script src="js/custom.js"></script>
+  <!--end footer-->
 </body>
-
 </html>
