@@ -212,7 +212,7 @@ hr {
     display: block;
     height: 1px;
     background: #FF0000;
-    background: linear-gradient(to right, rgba(227, 231, 235, 0.1) 0, rgba(227, 231, 235, 0.6) 50%, rgba(227, 231, 235, 0.1) 100%);
+    background: linear-gradient(to right, rgba(100, 231, 235, 0.1) 0, rgba(227, 231, 235, 0.6) 50%, rgba(227, 231, 235, 0.1) 100%);
     margin-top: 24px;
     margin-bottom: 24px;
 }
