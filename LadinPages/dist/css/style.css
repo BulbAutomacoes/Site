@@ -210,7 +210,15 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
-
+hr {
+    border: 0;
+    display: block;
+    height: 1px;
+    background: #e3e7eb;
+    background: linear-gradient(to right, rgba(227, 231, 235, 0.1) 0, rgba(227, 231, 235, 0.6) 50%, rgba(227, 231, 235, 0.1) 100%);
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
 ul,
 ol {
     margin-top: 0;
@@ -1075,6 +1083,7 @@ label {
 .hero-paragraph {
     margin-bottom: 32px;
 }
+/* Estilos existentes para .hero-media, etc. */
 .hero-media {
     position: relative;
     height: 200px;
@@ -1082,6 +1091,8 @@ label {
     background: #fff;
     border-radius: 4px 4px 0 0;
 }
+
+/* Sombra aplicada ao redor da imagem */
 .hero-media::before {
     content: "";
     position: absolute;
@@ -1089,9 +1100,47 @@ label {
     right: 0;
     bottom: 0;
     left: 0;
-    box-shadow: 0 16px 48px #e3e7eb;
+    box-shadow: 0 16px 48px rgba(32, 43, 54, 0.12); /* Sombra suave */
     mix-blend-mode: multiply;
+    z-index: -1;
 }
+
+/* Garantir que a imagem se ajuste corretamente */
+.hero-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajustes de responsividade */
+@media (min-width: 641px) {
+    .hero-media {
+        margin-top: 64px;
+        height: 400px;
+    }
+
+    .hero-media img {
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-media {
+        height: 250px;
+    }
+
+    .hero-media img {
+        object-position: center center;
+    }
+}
+
+/* Ajuste do cabeçalho para dispositivos maiores */
+@media (min-width: 641px) {
+    .site-header::before {
+        height: 640px;
+    }
+}
+
 @supports (-ms-ime-align: auto) {
     .hero-media::before {
         box-shadow: 0 16px 48px rgba(32, 43, 54, 0.12);
