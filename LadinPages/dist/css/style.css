@@ -991,16 +991,33 @@ label {
 .button-shadow:hover::before {
     box-shadow: 0 8px 24px rgba(32, 43, 54, 0.25);
 }
+/* Definindo o fundo do botão pequeno */
 .button-sm {
     padding: 8px 24px;
     height: 32px;
+    background-color: #4CAF50; /* Cor de fundo (verde) */
+    color: #fff; /* Cor do texto (branco) */
+    border: none; /* Remove qualquer borda padrão */
+    border-radius: 4px; /* Opcional: faz o botão ter bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    cursor: pointer; /* Mostra o cursor como uma mãozinha ao passar sobre o botão */
 }
+
+/* Definindo o efeito de sombra do botão com a classe button-shadow */
 .button-sm.button-shadow::before {
     box-shadow: 0 4px 16px rgba(32, 43, 54, 0.12);
 }
+
+/* Efeito de hover - quando o mouse passa sobre o botão */
 .button-sm.button-shadow:hover::before {
     box-shadow: 0 4px 16px rgba(32, 43, 54, 0.25);
 }
+
+/* Mudando a cor de fundo no hover */
+.button-sm:hover {
+    background-color: #45a049; /* Cor de fundo ao passar o mouse (verde mais escuro) */
+}
+
 .button-primary,
 .button-secondary {
     color: #fff !important;
