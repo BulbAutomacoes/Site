@@ -1092,22 +1092,27 @@ label {
         height: 640px;
     }
 }
+/* Ajuste o padding-top da .hero para reduzir o espaço entre o topo da página e o conteúdo */
 .hero {
-    position: relative;
-    padding-top: 40px;
-    overflow: hidden;
+    padding-top: 20px; /* Reduzido para aproximar o conteúdo do topo */
 }
+
+/* Ajuste a margem superior do título .hero-title */
+.hero-title {
+    margin-top: 0; /* Remover a margem superior do título */
+}
+
+/* Ajuste a margem inferior do parágrafo .hero-paragraph */
 .hero-paragraph {
-    margin-bottom: 32px;
+    margin-top: 8px; /* Diminui a margem entre o título e o parágrafo */
+    margin-bottom: 16px; /* Diminui a margem inferior do parágrafo */
 }
-/* Estilos existentes para .hero-media, etc. */
+
+/* Ajuste o .hero-media para também reduzir o espaço */
 .hero-media {
-    position: relative;
-    height: 200px;
-    margin-top: 40px;
-    background: #fff;
-    border-radius: 4px 4px 0 0;
+    margin-top: 16px; /* Reduzir a margem superior da imagem/elemento de mídia */
 }
+
 
 /* Sombra aplicada ao redor da imagem */
 .hero-media::before {
