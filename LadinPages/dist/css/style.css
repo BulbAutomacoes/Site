@@ -1095,7 +1095,7 @@ label {
 /* Ajuste o padding-top da .hero para reduzir o espaço entre o topo da página e o conteúdo */
 .hero {
     position: relative;
-    padding-top: 30px;
+    padding-top: 40px;
     overflow: hidden;
 }
 .hero-paragraph {
@@ -1108,10 +1108,7 @@ label {
     margin-top: 40px;
     background: #fff;
     border-radius: 4px 4px 0 0;
-
 }
-
-
 /* Sombra aplicada ao redor da imagem */
 .hero-media::before {
     content: "";
