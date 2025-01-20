@@ -210,15 +210,7 @@ body {
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
 }
-hr {
-    border: 0;
-    display: block;
-    height: 1px;
-    background: #e3e7eb;
-    background: linear-gradient(to right, rgba(227, 231, 235, 0.1) 0, rgba(227, 231, 235, 0.6) 50%, rgba(227, 231, 235, 0.1) 100%);
-    margin-top: 24px;
-    margin-bottom: 24px;
-}
+
 ul,
 ol {
     margin-top: 0;
