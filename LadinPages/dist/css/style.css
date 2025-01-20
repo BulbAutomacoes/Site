@@ -97,8 +97,11 @@ audio:not([controls]) {
     height: 0;
 }
 img {
-    border-style: none;
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
 }
+
 svg:not(:root) {
     overflow: hidden;
 }
