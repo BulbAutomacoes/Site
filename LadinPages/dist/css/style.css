@@ -865,7 +865,7 @@ button,input,select,textarea,label{
     box-shadow:0 4px 16px rgba(32,43,54,0.25)
 }
 .button-primary,.button-secondary{
-    color:#fff !important;
+    color:#ff0000 !important;
     transition:background .15s ease
 }
 .button-primary{
