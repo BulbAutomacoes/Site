@@ -348,11 +348,18 @@ h4,h5,h6,.h4,.h5,.h6{
 .text-light h1,.text-light h2,.text-light h3,.text-light h4,.text-light h5,.text-light h6,.text-light .h1,.text-light .h2,.text-light .h3,.text-light .h4,.text-light .h5,.text-light .h6{
     color:#fff !important
 }
-.text-sm{
-    font-size:18px;
-    line-height:27px;
-    letter-spacing:-0.1px
-    color="#000000"
+
+O motivo pelo qual o estilo não funcionou é porque há um erro de sintaxe no seu código CSS. Especificamente, você esqueceu de adicionar um ponto e vírgula (;) ao final da propriedade letter-spacing. Além disso, a forma correta de definir a cor no CSS é sem as aspas ao redor do valor hexadecimal.
+
+Aqui está o código corrigido:
+
+css
+Copiar
+.text-sm {
+    font-size: 18px;
+    line-height: 27px;
+    letter-spacing: -0.1px;
+    color: #000000;
 }
 .text-xs{
     font-size:16px;
