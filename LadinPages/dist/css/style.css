@@ -1208,7 +1208,7 @@ button,input,select,textarea,label{
     display:block;
     height:1px;
     background:#E3E7EB;
-    background:linear-gradient(to right, rgba(227,231,235,0.1) 0, rgba(227,231,235,0.6) 50%, rgba(227,231,235,0.1) 100%)
+    background: linear-gradient(to right, rgba(255, 0, 0, 0.1) 0%, rgba(255, 0, 0, 0.6) 50%, rgba(255, 0, 0, 0.1) 100%);
 }
 .pricing-table-features{
     color:#92A2B1
