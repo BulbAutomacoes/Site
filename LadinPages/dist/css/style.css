@@ -882,18 +882,16 @@ button,input,select,textarea,label{
     background: #ffffff;
     background: linear-gradient(65deg, #ffffff -25%, #f8f8f8 100%);
 }
-.button-secondary{
-    /*background:#00cec5;
-    background:linear-gradient(65deg, #00A2B8 -25%, #00F9D2 100%)*/
+.button-secondary {
     background: #ff0000; 
-    background: linear-gradient(65deg, #ff0000 -25%, #ff4d4d 100%); 
+    background: linear-gradient(65deg, #ff0000 -25%, #b30000 100%); /* Final mais escuro */
 }
-.button-secondary:hover{
-    /* background:#00d1c7;
-    background:linear-gradient(65deg, #00a4bb -25%, #00fcd4 100%)*/
+
+.button-secondary:hover {
     background: #ff0000; 
-    background: linear-gradient(65deg, #ff4d4d -25%, #ff1a1a 100%); 
+    background: linear-gradient(65deg, #b30000 -25%, #800000 100%); /* Final ainda mais escuro */
 }
+
 .button-block{
     display:flex
 }
