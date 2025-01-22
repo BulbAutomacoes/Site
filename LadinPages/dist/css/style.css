@@ -864,10 +864,16 @@ button,input,select,textarea,label{
 .button-sm.button-shadow:hover::before{
     box-shadow:0 4px 16px rgba(32,43,54,0.25)
 }
-.button-primary,.button-secondary{
-    color:#ff0000 !important;
-    transition:background .15s ease
+.button-primary {
+    color: #ff0000 !important; /* Cor vermelha para o botão primário */
+    transition: background .15s ease;
 }
+
+.button-secondary {
+    color: #ffffff !important; /* Cor branca para o botão secundário */
+    transition: background .15s ease;
+}
+
 .button-primary {
     background: #ffffff;
     background: linear-gradient(65deg, #ffffff -25%, #f8f8f8 100%);
