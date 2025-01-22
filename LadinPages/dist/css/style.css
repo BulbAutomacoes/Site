@@ -1090,8 +1090,8 @@ button,input,select,textarea,label{
 }
 @media (min-width: 641px){
     .features-extended .section-paragraph{
-        padding-left:10px;
-        padding-right:10px;
+        padding-left:0px;
+        padding-right:0px;
         margin-bottom:0
     }
     .feature-extended{
