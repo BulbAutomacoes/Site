@@ -864,30 +864,34 @@ button,input,select,textarea,label{
 .button-sm.button-shadow:hover::before{
     box-shadow:0 4px 16px rgba(32,43,54,0.25)
 }
-.button-primary,.button-secondary{
+.button-primary {
     color:#ff0000 !important;
     transition:background .15s ease
 }
+.button-secundary {
+    color:#ffffff !important;
+    transition:background .15s ease
+}
 .button-primary {
-    background: #ffffff; /* Cor de fundo sólida branca */
-    background: linear-gradient(65deg, #ffffff -25%, #f0f0f0 100%); /* Gradiente de branco */
+    background: #ffffff;
+    background: linear-gradient(65deg, #ffffff -25%, #f0f0f0 100%); 
 }
 
 .button-primary:hover {
-    background: #ffffff; /* Cor de fundo sólida branca ao passar o mouse */
-    background: linear-gradient(65deg, #f0f0f0 -25%, #e0e0e0 100%); /* Gradiente de branco mais escuro ao passar o mouse */
+    background: #ffffff; 
+    background: linear-gradient(65deg, #f0f0f0 -25%, #e0e0e0 100%);
 }
 .button-secondary{
     /*background:#00cec5;
     background:linear-gradient(65deg, #00A2B8 -25%, #00F9D2 100%)*/
-    background: #ffffff; 
-    background: linear-gradient(65deg, #ffffff -25%, #f0f0f0 100%); 
+    background: #ff0000; 
+    background: linear-gradient(65deg, #ff0000 -25%, #ff4d4d 100%); 
 }
 .button-secondary:hover{
     /* background:#00d1c7;
     background:linear-gradient(65deg, #00a4bb -25%, #00fcd4 100%)*/
-    background: #ffffff; 
-    background: linear-gradient(65deg, #f0f0f0 -25%, #e0e0e0 100%); 
+    background: #ff0000; 
+    background: linear-gradient(65deg, #ff4d4d -25%, #ff1a1a 100%); 
 }
 .button-block{
     display:flex
