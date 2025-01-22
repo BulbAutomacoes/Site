@@ -3,17 +3,6 @@ html{
     -ms-text-size-adjust:100%;
     -webkit-text-size-adjust:100%
 }
-body {
-  background-color: black; /* Altera o fundo geral para preto */
-  color: white; /* Torna o texto branco para garantir contraste */
-  margin: 0; /* Remove as margens padrão */
-  padding: 0; /* Remove o padding padrão */
-}
-
-/* Ajustes para a borda lateral */
-.container {
-  background-color: black; /* Garante que o contêiner tenha fundo preto */
-}
 body{
     margin:0
 }
