@@ -9,6 +9,11 @@ body {
   margin: 0; /* Remove as margens padrão */
   padding: 0; /* Remove o padding padrão */
 }
+
+/* Ajustes para a borda lateral */
+.container {
+  background-color: black; /* Garante que o contêiner tenha fundo preto */
+}
 body{
     margin:0
 }
