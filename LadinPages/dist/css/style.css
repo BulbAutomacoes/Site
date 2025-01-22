@@ -868,13 +868,14 @@ button,input,select,textarea,label{
     color:#ff0000 !important;
     transition:background .15s ease
 }
-.button-primary{
-    background:#00b9d2;
-    background:linear-gradient(65deg, #00A2B8 -25%, #00CFEB 100%)
+.button-primary {
+    background: #d32f2f;
+    background: linear-gradient(65deg, #f44336 -25%, #e57373 100%);
 }
-.button-primary:hover{
-    background:#00bbd5;
-    background:linear-gradient(65deg, #00a4bb -25%, #00d1ee 100%)
+
+.button-primary:hover {
+    background: #d32f2f;
+    background: linear-gradient(65deg, #c62828 -25%, #ef5350 100%);
 }
 .button-secondary{
     background:#00cec5;
