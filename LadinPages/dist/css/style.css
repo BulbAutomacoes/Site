@@ -349,12 +349,6 @@ h4,h5,h6,.h4,.h5,.h6{
     color:#fff !important
 }
 
-O motivo pelo qual o estilo não funcionou é porque há um erro de sintaxe no seu código CSS. Especificamente, você esqueceu de adicionar um ponto e vírgula (;) ao final da propriedade letter-spacing. Além disso, a forma correta de definir a cor no CSS é sem as aspas ao redor do valor hexadecimal.
-
-Aqui está o código corrigido:
-
-css
-Copiar
 .text-sm {
     font-size: 18px;
     line-height: 27px;
