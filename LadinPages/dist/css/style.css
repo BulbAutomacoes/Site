@@ -869,13 +869,13 @@ button,input,select,textarea,label{
     transition:background .15s ease
 }
 .button-primary {
-    background: #d32f2f;
-    background: linear-gradient(65deg, #f44336 -25%, #e57373 100%);
+    background: #ffffff; /* Cor de fundo sólida branca */
+    background: linear-gradient(65deg, #ffffff -25%, #f0f0f0 100%); /* Gradiente de branco */
 }
 
 .button-primary:hover {
-    background: #d32f2f;
-    background: linear-gradient(65deg, #c62828 -25%, #ef5350 100%);
+    background: #ffffff; /* Cor de fundo sólida branca ao passar o mouse */
+    background: linear-gradient(65deg, #f0f0f0 -25%, #e0e0e0 100%); /* Gradiente de branco mais escuro ao passar o mouse */
 }
 .button-secondary{
     background:#00cec5;
