@@ -1059,9 +1059,6 @@ button,input,select,textarea,label{
     }
 }
 
-.feature-icon img {
-    width: 100%;  /* Isso faz com que a imagem ocupe toda a largura disponível */
-    height: auto; /* Mantém a proporção da imagem */
 }
 .feature-icon{
     display:flex;
