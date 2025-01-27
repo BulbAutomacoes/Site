@@ -1058,9 +1058,15 @@ button,input,select,textarea,label{
         box-shadow:0 16px 48px rgba(32,43,54,0.12)
     }
 }
+
+.feature-icon img {
+    width: 100%;  /* Isso faz com que a imagem ocupe toda a largura disponível */
+    height: auto; /* Mantém a proporção da imagem */
+}
 .feature-icon{
     display:flex;
     justify-content:center
+
 }
 @media (min-width: 641px){
     .features .section-title{
