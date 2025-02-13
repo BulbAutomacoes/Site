@@ -62,16 +62,22 @@ body {
 
 .heading_container.heading_center {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   text-align: center;
 }
 
 .heading_container.heading_center h2::before {
   left: 50%;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
+
+/* Remover o gráfico para a classe .no-graphic */
+.heading_container.no-graphic h2::before {
+  content: none;
+}
+
 
 /*header section*/
 .hero_area {
