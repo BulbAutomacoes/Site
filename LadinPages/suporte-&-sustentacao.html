@@ -194,8 +194,8 @@
     <div class="container">
         <div class="features-inner section-inner has-top-divider">
             <h2 class="section-title mt-0" style="color: #000000;">Por que contratar?</h2>
-            <div class="features-wrap" style="display: flex; justify-content: space-between; gap: 10px; flex-wrap: wrap;"> <!-- Flex wrap para responsividade -->
-                <div class="feature is-revealing" style="flex: 1 1 30%; box-sizing: border-box; margin-bottom: 20px;"> <!-- Responsivo para 30% -->
+            <div class="features-wrap" style="display: flex; justify-content: space-between; gap: 5px; flex-wrap: wrap;"> <!-- Gap reduzido para 5px -->
+                <div class="feature is-revealing" style="flex: 1 1 32%; box-sizing: border-box; margin-bottom: 10px;"> <!-- Largura de 32% -->
                     <div class="feature-inner">
                         <div class="feature-icon" style="display: flex; justify-content: center; align-items: center;">
                             <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
@@ -206,7 +206,7 @@
                         <p class="text-sm" style="color: #000000;">Especialistas Bulb te ajudam a corrigir problemas em robôs que impedem ou atrapalham etapas de seus processos automatizados</p>
                     </div>
                 </div>
-                <div class="feature is-revealing" style="flex: 1 1 30%; box-sizing: border-box; margin-bottom: 20px;"> <!-- Responsivo para 30% -->
+                <div class="feature is-revealing" style="flex: 1 1 32%; box-sizing: border-box; margin-bottom: 10px;"> <!-- Largura de 32% -->
                     <div class="feature-inner">
                         <div class="feature-icon" style="display: flex; justify-content: center; align-items: center;">
                             <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
@@ -217,7 +217,7 @@
                         <p class="text-sm" style="color: #000000;">Manutenções preditivas programadas te ajudam a evitar problemas em seus processos</p>
                     </div>
                 </div>
-                <div class="feature is-revealing" style="flex: 1 1 30%; box-sizing: border-box; margin-bottom: 20px;"> <!-- Responsivo para 30% -->
+                <div class="feature is-revealing" style="flex: 1 1 32%; box-sizing: border-box; margin-bottom: 10px;"> <!-- Largura de 32% -->
                     <div class="feature-inner">
                         <div class="feature-icon" style="display: flex; justify-content: center; align-items: center;">
                             <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg">
@@ -238,28 +238,26 @@
     /* Para telas pequenas */
     @media (max-width: 768px) {
         .features-wrap {
-            gap: 15px; /* Ajusta o gap para telas menores */
+            gap: 5px; /* Gap reduzido */
         }
 
         .feature {
             flex: 1 1 100%; /* Faz os cards ocuparem 100% da largura */
-            margin-bottom: 15px; /* Diminui a margem inferior */
+            margin-bottom: 5px; /* Diminui a margem inferior */
         }
     }
 
     /* Para telas maiores */
     @media (min-width: 769px) {
         .features-wrap {
-            gap: 20px; /* Maior espaço entre os cards */
+            gap: 5px; /* Gap reduzido */
         }
 
         .feature {
-            flex: 1 1 30%; /* Largura dos cards ajustada para 30% */
+            flex: 1 1 32%; /* Largura de 32% para cada card */
         }
     }
 </style>
-
-
 
 
             <section class="features-extended section">
