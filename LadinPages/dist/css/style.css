@@ -1213,6 +1213,7 @@ button,input,select,textarea,label{
     height:1px;
     background:#E3E7EB;
     background:linear-gradient(to right, rgba(227,231,235,0.1) 0, rgba(227,231,235,0.6) 50%, rgba(227,231,235,0.1) 100%)
+    margin-top: 10px;
 }
 .pricing-table-features{
     color:#92A2B1
