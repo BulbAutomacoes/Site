@@ -209,7 +209,6 @@
     <div class="heading_container heading_center">
       <h2>Contate-nos</h2>
     </div>
-    <br><br>
     <div class="row">
       <div class="col-md-7 mx-auto">
         <label for="formType">Escolha o tipo de formulário:</label>
@@ -223,38 +222,38 @@
         
         <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
           <div class="contact_form-container">
-            <div id="defaultForm">
-              <input type="text" name="Nome" placeholder="Nome ou empresa" />
-              <input type="email" name="Email" placeholder="E-mail " />
-              <input type="phone" name="Telefone" placeholder="Telefone " />
-              <input type="text" name="Automacao" placeholder="Já possui automação? " />
+            <div id="defaultForm" class="form-group">
+              <input type="text" name="Nome" placeholder="Nome ou empresa" required />
+              <input type="email" name="Email" placeholder="E-mail" required />
+              <input type="phone" name="Telefone" placeholder="Telefone" required />
+              <input type="text" name="Automacao" placeholder="Já possui automação?" />
               <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
               <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
             </div>
             
-            <div id="supportForm" style="display: none;">
-              <input type="text" name="Nome" placeholder="Seu nome" />
-              <input type="email" name="Email" placeholder="Seu e-mail" />
-              <textarea name="Problema" placeholder="Descreva seu problema"></textarea>
+            <div id="supportForm" class="form-group" style="display: none;">
+              <input type="text" name="Nome" placeholder="Seu nome" required />
+              <input type="email" name="Email" placeholder="Seu e-mail" required />
+              <textarea name="Problema" placeholder="Descreva seu problema" required></textarea>
             </div>
             
-            <div id="salesForm" style="display: none;">
-              <input type="text" name="Nome" placeholder="Nome da empresa" />
-              <input type="email" name="Email" placeholder="E-mail" />
-              <input type="text" name="Produto" placeholder="Produto de interesse" />
+            <div id="salesForm" class="form-group" style="display: none;">
+              <input type="text" name="Nome" placeholder="Nome da empresa" required />
+              <input type="email" name="Email" placeholder="E-mail" required />
+              <input type="text" name="Produto" placeholder="Produto de interesse" required />
               <input type="text" name="Orcamento" placeholder="Orçamento desejado" />
             </div>
             
-            <div id="feedbackForm" style="display: none;">
-              <input type="text" name="Nome" placeholder="Seu nome" />
-              <input type="email" name="Email" placeholder="Seu e-mail" />
-              <textarea name="Feedback" placeholder="Deixe seu feedback"></textarea>
+            <div id="feedbackForm" class="form-group" style="display: none;">
+              <input type="text" name="Nome" placeholder="Seu nome" required />
+              <input type="email" name="Email" placeholder="Seu e-mail" required />
+              <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
             </div>
             
-            <div id="jobForm" style="display: none;">
-              <input type="text" name="Nome" placeholder="Seu nome" />
-              <input type="email" name="Email" placeholder="Seu e-mail" />
-              <input type="file" name="CV" accept=".pdf,.doc,.docx" />
+            <div id="jobForm" class="form-group" style="display: none;">
+              <input type="text" name="Nome" placeholder="Seu nome" required />
+              <input type="email" name="Email" placeholder="Seu e-mail" required />
+              <input type="file" name="CV" accept=".pdf,.doc,.docx" required />
             </div>
             
             <div class="btn-box">
@@ -274,22 +273,20 @@ function changeForm() {
   
   forms.forEach(id => {
     document.getElementById(id).style.display = "none";
+    document.querySelectorAll(`#${id} input, #${id} textarea`).forEach(field => {
+      field.disabled = true;
+    });
   });
   
-  if (formType === "support") {
-    document.getElementById("supportForm").style.display = "block";
-  } else if (formType === "sales") {
-    document.getElementById("salesForm").style.display = "block";
-  } else if (formType === "feedback") {
-    document.getElementById("feedbackForm").style.display = "block";
-  } else if (formType === "job") {
-    document.getElementById("jobForm").style.display = "block";
-  } else {
-    document.getElementById("defaultForm").style.display = "block";
+  let activeForm = document.getElementById(formType + "Form");
+  if (activeForm) {
+    activeForm.style.display = "block";
+    activeForm.querySelectorAll("input, textarea").forEach(field => {
+      field.disabled = false;
+    });
   }
 }
 </script>
-
   <!-- end contact section -->
 
   <!-- team section -->
