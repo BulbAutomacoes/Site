@@ -241,7 +241,7 @@
                   <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
                 </div>
 
-                <div id="jobForm" class="form-group" style="display: none;">
+                <div id="trabalhe-conosco" class="form-group" style="display: none;">
                   <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
                   <input type="email" name="Email" placeholder="Seu e-mail" required />
                   <input type="file" name="CV" accept=".pdf,.doc,.docx" required />
@@ -301,8 +301,8 @@
         document.getElementById('sustentacao').style.display = 'block';
         formTitle.textContent = 'Sustentação de Sistemas';
         break;
-      case 'jobForm':
-        document.getElementById('jobForm').style.display = 'block';
+      case 'trabalhe-conosco':
+        document.getElementById('trabalhe-conosco').style.display = 'block';
         formTitle.textContent = 'Trabalhe Conosco';
         break;
       default:
@@ -320,12 +320,3 @@
 </body>
 
 </html>
-
-
-nesse código, não está sendo exbido os submenus do menu de seleção Serviços:
-
-<ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #1c1c1c !important; backdrop-filter: blur(10px);">
-                    <li><a class="dropdown-item" href="../LadinPages/automacao-de-processos-virtuais.html" style="color: white !important; padding: 10px;">Automação de processos virtuais</a></li>
-                    <li><a class="dropdown-item" href="../LadinPages/robos-como-servico.html" style="color: white !important; padding: 10px;">Robôs como serviço</a></li>
-                    <li><a class="dropdown-item" href="../LadinPages/suporte-&-sustentacao.html" style="color: white !important; padding: 10px;">Suporte e Sustentação</a></li>
-                    </ul>
