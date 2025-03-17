@@ -193,7 +193,7 @@
           <div class="col-md-7 mx-auto">
             <label for="formType">Escolha o tipo de formulário:</label>
             <select id="formType" onchange="changeForm()">
-              <option value="automatizar">Automatizar</option>
+              <option value="automatizar">RPA</option>
               <option value="suporte-corretivo">Suporte Corretivo</option>
               <option value="suporte-preditivo">Suporte Preditivo</option>
               <option value="sustentacao">Sustentação</option>
@@ -204,7 +204,16 @@
             <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
               <div class="contact_form-container">
                 <div id="automatizar" class="form-group">
-                  <input type="text" name="Nome" placeholder="Nome ou empresa" required />
+                  <input type="text" name="Nome" placeholder="Nome ou empresa (RPA)" required />
+                  <input type="email" name="Email" placeholder="E-mail" required />
+                  <input type="phone" name="Telefone" placeholder="Telefone" required />
+                  <input type="text" name="Automacao" placeholder="Já possui automação?" />
+                  <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
+                  <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
+                </div>
+
+                <div id="raas" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Nome ou empresa (RaaS)" required />
                   <input type="email" name="Email" placeholder="E-mail" required />
                   <input type="phone" name="Telefone" placeholder="Telefone" required />
                   <input type="text" name="Automacao" placeholder="Já possui automação?" />
@@ -213,35 +222,26 @@
                 </div>
 
                 <div id="suporte-corretivo" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Seu nome" required />
+                  <input type="text" name="Nome" placeholder="Seu nome (Corretivo)" required />
                   <input type="email" name="Email" placeholder="Seu e-mail" required />
                   <textarea name="Problema" placeholder="Descreva seu problema" required></textarea>
                 </div>
 
                 <div id="suporte-preditivo" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Nome da empresa" required />
+                  <input type="text" name="Nome" placeholder="Nome da empresa (Preditivo)" required />
                   <input type="email" name="Email" placeholder="E-mail" required />
                   <input type="text" name="Produto" placeholder="Produto de interesse" required />
                   <input type="text" name="Orcamento" placeholder="Orçamento desejado" />
                 </div>
 
                 <div id="sustentacao" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Seu nome" required />
+                  <input type="text" name="Nome" placeholder="Seu nome (Sustentação)" required />
                   <input type="email" name="Email" placeholder="Seu e-mail" required />
                   <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
                 </div>
 
-                <div id="raas" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Nome ou empresa" required />
-                  <input type="email" name="Email" placeholder="E-mail" required />
-                  <input type="phone" name="Telefone" placeholder="Telefone" required />
-                  <input type="text" name="Automacao" placeholder="Já possui automação?" />
-                  <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
-                  <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
-                </div>
-
                 <div id="jobForm" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Seu nome" required />
+                  <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
                   <input type="email" name="Email" placeholder="Seu e-mail" required />
                   <input type="file" name="CV" accept=".pdf,.doc,.docx" required />
                 </div>
