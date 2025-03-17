@@ -107,6 +107,33 @@
       }
     }
 
+    /* Estilo do label para parecer um botão */
+    #fileLabel {
+      display: inline-block;
+      padding: 12px 18px; /* Distância do texto no botão */
+      background-color: #FF0000; /* Cor de fundo do botão */
+      color: white; /* Cor do texto */
+      border-radius: 5px; /* Bordas arredondadas */
+      cursor: pointer; /* Cursor de ponteiro quando passar o mouse */
+      font-size: 1rem; /* Tamanho da fonte */
+      font-weight: bold; /* Negrito para a frase */
+      text-align: center; /* Alinhar o texto */
+      margin-top: 10px; /* Espaço acima */
+      border: 2px solid #FF0000; /* Borda do botão */
+      transition: background-color 0.3s, border-color 0.3s; /* Transição suave para efeitos de hover */
+    }
+
+    /* Efeito de hover */
+    #fileLabel:hover {
+      background-color: transparent; /* Cor de fundo transparente ao passar o mouse */
+      color: #FF0000; /* Cor do texto altera para vermelho */
+      border-color: #FF0000; /* Borda do botão fica mais pronunciada */
+    }
+
+    /* Estilo para quando o botão é clicado */
+    #fileLabel:active {
+      background-color: #cc0000; /* Cor de fundo mais escura quando pressionado */
+    }
   </style>
 </head>
 
@@ -204,47 +231,10 @@
           <div class="col-md-7 mx-auto">
             <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
               <div class="contact_form-container">
-                <div id="automatizar" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Nome ou empresa (RPA)" required />
-                  <input type="email" name="Email" placeholder="E-mail" required />
-                  <input type="phone" name="Telefone" placeholder="Telefone" required />
-                  <input type="text" name="Automacao" placeholder="Já possui automação?" />
-                  <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
-                  <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
-                </div>
-
-                <div id="raas" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Nome ou empresa (RaaS)" required />
-                  <input type="email" name="Email" placeholder="E-mail" required />
-                  <input type="phone" name="Telefone" placeholder="Telefone" required />
-                  <input type="text" name="Automacao" placeholder="Já possui automação?" />
-                  <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
-                  <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
-                </div>
-
-                <div id="suporte-corretivo" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Seu nome (Corretivo)" required />
-                  <input type="email" name="Email" placeholder="Seu e-mail" required />
-                  <textarea name="Problema" placeholder="Descreva seu problema" required></textarea>
-                </div>
-
-                <div id="suporte-preditivo" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Nome da empresa (Preditivo)" required />
-                  <input type="email" name="Email" placeholder="E-mail" required />
-                  <input type="text" name="Produto" placeholder="Produto de interesse" required />
-                  <input type="text" name="Orcamento" placeholder="Orçamento desejado" />
-                </div>
-
-                <div id="sustentacao" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Seu nome (Sustentação)" required />
-                  <input type="email" name="Email" placeholder="Seu e-mail" required />
-                  <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
-                </div>
-
                 <div id="trabalhe-conosco" class="form-group" style="display: none;">
                   <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
                   <input type="email" name="Email" placeholder="Seu e-mail" required />
-                  <!-- Input de Arquivo com Estilo Personalizado -->
+                  <!-- Botão com a frase "Adicione um arquivo" -->
                   <label for="cvInput" id="fileLabel">Adicione um arquivo</label>
                   <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required style="display: none;" />
                 </div>
@@ -262,76 +252,25 @@
     <!-- WhatsApp Button -->
     <a href="https://wa.me/+5511948798009" target="_blank" style="position: fixed; bottom: 1.5rem; right: 1.5rem; background-color: #25d366; color: white; width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1); text-decoration: none; z-index: 1000;" id="whatsapp-button">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="width: 1.8rem; height: 1.8rem; fill: white;">
-        <path d="M16.003 3A12.942 12.942 0 0 0 3 16c0 2.293.614 4.533 1.777 6.489L3 29l6.648-1.735A12.94 12.94 0 0 0 16.003 29c7.18 0 13-5.82 13-13s-5.82-13-13-13zm0 2C22.076 5 27 9.923 27 16c0 6.075-4.924 11-10.997 11a10.89 10.89 0-0 1-4.768-1.108l-.356-.184-4.178 1.09 1.15-4.123-1.418-.67A9.935 9.935 0 0 1 9 16C9 9.923 13.924 5 16.003 5z"></path>
+        <path d="M16.003 3A12.942 12.942 0 0 0 3 16c0 2.293.614 4.533 1.777 6.489L3 29l6.648-1.735A12.94 12.94 0 0 0 16.003 29c7.18 0 13-5.82 13-13s-5.82-13-13-13zm0 2C22.076 5 26 8.924 26 12.999S22.076 21 16.003 21a12.932 12.932 0 0 1-5.16-1.125l-.91-.42-2.465 1.732c-.6.421-.91.573-1.386.73l-.843.253 1.577-4.617-.18-.877-.683-.77A10.903 10.903 0 0 1 16.003 7z"/>
       </svg>
     </a>
   </div>
 
-<script>
-  // Função para exibir o formulário baseado no parâmetro da URL e atualizar o título
-  function showFormFromURL() {
-    // Obtém o parâmetro da URL (ex: ?form=raas)
-    const urlParams = new URLSearchParams(window.location.search);
-    const formType = urlParams.get('form'); // Obtém o valor do parâmetro 'form'
+  <script>
+    // JavaScript para atualizar o texto do input de arquivo
+    const fileInput = document.getElementById('cvInput');
+    const fileLabel = document.getElementById('fileLabel');
 
-    // Oculta todos os formulários
-    var forms = document.querySelectorAll('.form-group');
-    forms.forEach(function(form) {
-      form.style.display = 'none';
+    fileInput.addEventListener('change', function () {
+      if (fileInput.files.length > 0) {
+        fileLabel.textContent = fileInput.files[0].name; // Mostra o nome do arquivo
+      } else {
+        fileLabel.textContent = 'Adicione um arquivo'; // Texto padrão
+      }
     });
+  </script>
 
-    // Atualiza o título com base no tipo de formulário
-    const formTitle = document.getElementById('formTitle');
-    switch (formType) {
-      case 'automatizar':
-        document.getElementById('automatizar').style.display = 'block';
-        formTitle.textContent = 'Automatize seus processos';
-        break;
-      case 'raas':
-        document.getElementById('raas').style.display = 'block';
-        formTitle.textContent = 'Robôs como Serviço (RaaS)';
-        break;
-      case 'suporte-corretivo':
-        document.getElementById('suporte-corretivo').style.display = 'block';
-        formTitle.textContent = 'Suporte Corretivo';
-        break;
-      case 'suporte-preditivo':
-        document.getElementById('suporte-preditivo').style.display = 'block';
-        formTitle.textContent = 'Suporte Preditivo';
-        break;
-      case 'sustentacao':
-        document.getElementById('sustentacao').style.display = 'block';
-        formTitle.textContent = 'Sustentação de Sistemas';
-        break;
-      case 'trabalhe-conosco':
-        document.getElementById('trabalhe-conosco').style.display = 'block';
-        formTitle.textContent = 'Trabalhe Conosco';
-        break;
-      default:
-        formTitle.textContent = 'Formulário não encontrado';
-        break;
-    }
-  }
-
-  // Chama a função assim que a página carrega
-  window.onload = showFormFromURL;
-</script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  // JavaScript para atualizar o texto do input de arquivo
-  const fileInput = document.getElementById('cvInput');
-  const fileLabel = document.getElementById('fileLabel');
-
-  // Função que é chamada quando um arquivo é selecionado
-  fileInput.addEventListener('change', function () {
-    if (fileInput.files.length > 0) {
-      fileLabel.textContent = fileInput.files[0].name; // Mostra o nome do arquivo
-    } else {
-      fileLabel.textContent = 'Adicione um arquivo'; // Mostra o texto quando nenhum arquivo é selecionado
-    }
-  });
-</script>
 </body>
 
 </html>
