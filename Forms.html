@@ -263,6 +263,35 @@
       </svg>
     </a>
   </div>
+
+<script>
+  function changeForm() {
+    // Obtém o valor selecionado no menu suspenso
+    var selectedForm = document.getElementById("formType").value;
+
+    // Esconde todos os formulários
+    var forms = document.querySelectorAll('.form-group');
+    forms.forEach(function(form) {
+      form.style.display = 'none';
+    });
+
+    // Exibe o formulário correspondente ao valor selecionado
+    var selectedFormElement = document.getElementById(selectedForm);
+    if (selectedFormElement) {
+      selectedFormElement.style.display = 'block';
+    }
+  }
+
+  // Chama a função changeForm inicialmente para garantir que o formulário correto seja mostrado
+  window.onload = function() {
+    changeForm();
+  }
+</script>
+
 </body>
 
 </html>
+
+
+
+
