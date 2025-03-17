@@ -106,7 +106,40 @@
         font-size: 2.5rem;
       }
     }
+ /* Estilo para o botão de upload */
+    #fileLabel {
+      display: inline-block;
+      background-color: #333; /* Fundo cinza escuro */
+      color: #fff; /* Texto branco */
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
+    }
 
+    /* Efeito ao passar o mouse */
+    #fileLabel:hover {
+      background-color: #555; /* Fundo cinza claro */
+    }
+
+    /* Remover o botão de arquivo real */
+    #cvInput {
+      display: none;
+    }
+
+    /* Estilo para o formulário */
+    .form-group {
+      margin: 20px 0;
+    }
+
+    input[type="text"], input[type="email"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
   </style>
 </head>
 
@@ -241,13 +274,13 @@
                   <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
                 </div>
 
-                <div id="trabalhe-conosco" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
-                  <input type="email" name="Email" placeholder="Seu e-mail" required />
-                  <!-- Input de Arquivo com Estilo Personalizado -->
-                  <label for="cvInput" id="fileLabel">Adicione um arquivo</label>
-                  <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required style="display: none;" />
-                </div>
+              <div id="trabalhe-conosco" class="form-group" style="display: none;">
+                <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
+                <input type="email" name="Email" placeholder="Seu e-mail" required />
+                <!-- Input de Arquivo com Estilo Personalizado -->
+                <label for="cvInput" id="fileLabel">Adicione um arquivo</label>
+                <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required />
+              </div>
 
                 <div class="btn-box">
                   <button type="submit">Enviar</button>
