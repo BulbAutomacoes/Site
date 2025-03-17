@@ -36,19 +36,19 @@
     }
 
     .btn-box button {
-      border-radius: 3px;
-      padding: 10px 20px;
-      background-color: #ffffff;
-      color: white;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-    }
+    border-radius: 3px;  /* Borda com 2px de arredondamento */
+    padding: 10px 20px;   /* Espaçamento interno do botão */
+    background-color: #ffffff;  /* Cor de fundo */
+    color: white;  /* Cor do texto */
+    font-size: 16px;  /* Tamanho da fonte */
+    cursor: pointer;  /* Cursor de mão ao passar por cima */
+    transition: background-color 0.3s;  /* Efeito de transição para a cor de fundo */
+  }
 
-    /* Efeito ao passar o mouse */
-    .btn-box button:hover {
-      background-color: #e60000;
-    }
+  /* Efeito ao passar o mouse */
+  .btn-box button:hover {
+    background-color: #e60000;  /* Cor de fundo ao passar o mouse */
+  }
     /* Estilo do pop-up */
     .popup-content {
       position: fixed;
@@ -62,6 +62,13 @@
       z-index: 1001;
       max-width: 90%;
       width: 30rem;
+
+      /* Flexbox para centralizar o conteúdo */
+      display: flex;
+      flex-direction: column; /* Alinhar itens verticalmente */
+      align-items: center; /* Centralizar horizontalmente */
+      justify-content: center; /* Centralizar verticalmente */
+      gap: 1rem; /* Espaçamento entre itens */
     }
 
     /* Botão de fechar */
@@ -90,6 +97,7 @@
       color: #FF0000;
     }
 
+    /* Adaptações responsivas para telas menores */
     @media (max-width: 768px) {
       .popup-content {
         width: 90%;
@@ -100,6 +108,7 @@
         font-size: 1.1rem;
         padding: 0.8rem 1.2rem;
       }
+
     }
 
     @media (max-width: 480px) {
@@ -111,22 +120,21 @@
         font-size: 2.5rem;
       }
     }
-
-    /* Estilo para o botão de upload */
+ /* Estilo para o botão de upload */
     #fileLabel {
       display: inline-block;
-      background-color: #333;
-      color: #fff;
+      background-color: #333; /* Fundo cinza escuro */
+      color: #fff; /* Texto branco */
       padding: 10px 20px;
       border-radius: 3px;
       cursor: pointer;
       font-size: 16px;
-      transition: background-color 0.3s ease;
+      transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
     }
 
     /* Efeito ao passar o mouse */
     #fileLabel:hover {
-      background-color: #555;
+      background-color: #555; /* Fundo cinza claro */
     }
 
     /* Remover o botão de arquivo real */
@@ -153,97 +161,229 @@
 <body>
 
   <div class="hero_area">
-    <!-- O conteúdo da hero área vai aqui -->
-  </div>
-
-  <section class="contact_section layout_padding">
-    <div class="contact_bg_box" style="background-color: white;"></div>
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2 id="formTitle">Contate-nos</h2>
-      </div>
-      <div class="row">
-        <div class="col-md-7 mx-auto">
-          <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
-            <div class="contact_form-container">
-
-              <!-- Formulário Organizar e Automatizar -->
-              <div id="organizar-e-automatizar" class="form-group" style="display: none;">
-                <input type="text" name="Nome" placeholder="Nome" required />
-                <input type="text" name="Empresa" placeholder="Empresa" required />
-                <input type="text" name="Cargo" placeholder="Cargo" required />
-                <input type="email" name="Email" placeholder="E-mail" required />
-                <input type="phone" name="Telefone" placeholder="Telefone" required />
-                <input type="text" name="Objetivo" placeholder="Qual seu objetivo principal?" required />
-              </div>
-
-              <!-- Formulário Organizar RaaS -->
-              <div id="organizar-e-automatizar-raas" class="form-group" style="display: none;">
-                <input type="text" name="Nome" placeholder="Nome ou Empresa" required />
-                <input type="email" name="Email" placeholder="E-mail" required />
-                <input type="phone" name="Telefone" placeholder="Telefone" required />
-                <input type="text" name="Interesse" placeholder="Qual serviço tem interesse?" required />
-                <textarea name="Mensagem" placeholder="Mensagem" required></textarea>
-              </div>
-
-              <!-- Outros formulários já existentes -->
-              <div id="automatizar" class="form-group" style="display: none;">
-                <input type="text" name="Nome" placeholder="Nome" required />
-                <input type="text" name="Empresa" placeholder="Empresa" required />
-                <input type="text" name="Cargo" placeholder="Cargo" required />
-                <input type="email" name="Email" placeholder="E-mail" required />
-                <input type="phone" name="Telefone" placeholder="Telefone" required />
-                <input type="text" name="Automacao" placeholder="Você será o único responsável pelo projeto de implantação de automações?" />
-                <input type="text" name="Automacao" placeholder="Sua organização já possui processos virtuais automatizados?" />
-                <input type="text" name="Interesse" placeholder="Quantos processos pretende automatizar?" />
-              </div>
-
-              <div class="btn-box">
-                <button type="submit">Enviar</button>
-              </div>
-            </div>
-          </form>
-        </div>
+    <div class="hero_bg_box">
+      <div class="img-box">
+        <img src="images/hero-bg.jpeg" alt="">
       </div>
     </div>
-  </section>
 
-  <script>
-    // Função para exibir o formulário baseado no parâmetro da URL e atualizar o título
-    function showFormFromURL() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const formType = urlParams.get('form'); // Obtém o valor do parâmetro 'form'
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_link-container">
+            <a href="index.html" class="contact_link1">
+              <img src="images/Logo2.png" alt="Ícone" class="icon">
+            </a>
+            <a class="contact_link2">
+              <span class="navbar-brand" style="color: #FF0000; text-align:center; margin-left: 10%">
+                Se o seu desejo é tecnologia, nós realizamos
+              </span>
+            </a>
+            <a href="mailto:contato@bulbautomacoes.com.br?subject=Quero%20Automatizar" class="contact_link3">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                contato@bulbautomacoes.com.br
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
 
-      var forms = document.querySelectorAll('.form-group');
-      forms.forEach(function(form) {
-        form.style.display = 'none';
-      });
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
 
-      const formTitle = document.getElementById('formTitle');
-      switch (formType) {
-        case 'automatizar':
-          document.getElementById('automatizar').style.display = 'block';
-          formTitle.textContent = 'Automatize seus processos';
-          break;
-        case 'organizar-e-automatizar':
-          document.getElementById('organizar-e-automatizar').style.display = 'block';
-          formTitle.textContent = 'Organizar e Automatizar';
-          break;
-        case 'organizar-e-automatizar-raas':
-          document.getElementById('organizar-e-automatizar-raas').style.display = 'block';
-          formTitle.textContent = 'Organizar RaaS';
-          break;
-        default:
-          formTitle.textContent = 'Formulário não encontrado';
-          break;
-      }
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sobre-nos.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Serviços
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" 
+                      style="background-color: #1c1c1c !important; backdrop-filter: blur(10px);">
+                    <li><a class="dropdown-item" href="LadinPages/automacao-de-processos-virtuais.html" 
+                           style="color: white !important; padding: 10px; display: block; background-color: #1c1c1c !important;"
+                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
+                           onmouseout="this.style.background='#1c1c1c'">Automação de processos virtuais</a></li>
+                    <li><a class="dropdown-item" href="LadinPages/robos-como-servico.html" 
+                           style="color: white !important; padding: 10px; display: block; background-color: #1c1c1c !important;"
+                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
+                           onmouseout="this.style.background='#1c1c1c'">Robôs como serviço</a></li>
+                    <li><a class="dropdown-item" href="LadinPages/suporte-&-sustentacao.html" 
+                           style="color: white !important; padding: 10px; display: block; background-color: #1c1c1c !important;"
+                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
+                           onmouseout="this.style.background='#1c1c1c'">Suporte e Sustentação</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="parceiros.html">Seja Parceiro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Forms.html">Trabalhe Conosco</a>
+                </li>
+                <li class="nav-item" style="background-color: red;">
+                  <a class="nav-link" href="https://wa.me/5511948798009?text=Olá,%20Bulb!%20Desejo%20automatizar%20processos.">Quero Automatizar</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="contact_section layout_padding">
+      <div class="contact_bg_box" style="background-color: white;"></div>
+      <div class="container">
+        <div class="heading_container heading_center">
+          <!-- Título dinâmico será inserido aqui -->
+          <h2 id="formTitle">Contate-nos</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mx-auto">
+            <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
+              <div class="contact_form-container">
+                <div id="automatizar" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Nome" required />
+                  <input type="text" name="Nome" placeholder="Empresa" required />
+                  <input type="text" name="Nome" placeholder="Cargo" required />
+                  <input type="email" name="Email" placeholder="E-mail" required />
+                  <input type="phone" name="Telefone" placeholder="Telefone" required />
+                  <input type="text" name="Automacao" placeholder="Você será o único responsável pelo projeto de implantação de automações?" />
+                  <input type="text" name="Automacao" placeholder="Sua organização já possui processos virtuais automatizados?" />
+                  <input type="text" name="Interesse" placeholder="Quantos processos pretende automatizar?" />
+                </div>
+
+                <div id="raas" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Nome ou empresa (RaaS)" required />
+                  <input type="email" name="Email" placeholder="E-mail" required />
+                  <input type="phone" name="Telefone" placeholder="Telefone" required />
+                  <input type="text" name="Automacao" placeholder="Já possui automação?" />
+                  <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
+                  <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
+                </div>
+
+                <div id="suporte-corretivo" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Seu nome (Corretivo)" required />
+                  <input type="email" name="Email" placeholder="Seu e-mail" required />
+                  <textarea name="Problema" placeholder="Descreva seu problema" required></textarea>
+                </div>
+
+                <div id="suporte-preditivo" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Nome da empresa (Preditivo)" required />
+                  <input type="email" name="Email" placeholder="E-mail" required />
+                  <input type="text" name="Produto" placeholder="Produto de interesse" required />
+                  <input type="text" name="Orcamento" placeholder="Orçamento desejado" />
+                </div>
+
+                <div id="sustentacao" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Seu nome (Sustentação)" required />
+                  <input type="email" name="Email" placeholder="Seu e-mail" required />
+                  <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
+                </div>
+
+             <div id="trabalhe-conosco" class="form-group" style="display: none;">
+              <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
+              <input type="email" name="Email" placeholder="Seu e-mail" required />
+              
+              <!-- Adicionando uma margem inferior para espaçar -->
+              <label for="cvInput" id="fileLabel" style="margin-top: 15px;">Adicione um arquivo</label>
+              <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required />
+            </div>
+
+
+                <div class="btn-box">
+                  <button type="submit">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/+5511948798009" target="_blank" style="position: fixed; bottom: 1.5rem; right: 1.5rem; background-color: #25d366; color: white; width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1); text-decoration: none; z-index: 1000;" id="whatsapp-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="width: 1.8rem; height: 1.8rem; fill: white;">
+        <path d="M16.003 3A12.942 12.942 0 0 0 3 16c0 2.293.614 4.533 1.777 6.489L3 29l6.648-1.735A12.94 12.94 0 0 0 16.003 29c7.18 0 13-5.82 13-13s-5.82-13-13-13zm0 2C22.076 5 27 9.923 27 16c0 6.075-4.924 11-10.997 11a10.89 10.89 0-0 1-4.768-1.108l-.356-.184-4.178 1.09 1.15-4.123-1.418-.67A9.935 9.935 0 0 1 9 16C9 9.923 13.924 5 16.003 5z"></path>
+      </svg>
+    </a>
+  </div>
+
+<script>
+  // Função para exibir o formulário baseado no parâmetro da URL e atualizar o título
+  function showFormFromURL() {
+    // Obtém o parâmetro da URL (ex: ?form=raas)
+    const urlParams = new URLSearchParams(window.location.search);
+    const formType = urlParams.get('form'); // Obtém o valor do parâmetro 'form'
+
+    // Oculta todos os formulários
+    var forms = document.querySelectorAll('.form-group');
+    forms.forEach(function(form) {
+      form.style.display = 'none';
+    });
+
+    // Atualiza o título com base no tipo de formulário
+    const formTitle = document.getElementById('formTitle');
+    switch (formType) {
+      case 'automatizar':
+        document.getElementById('automatizar').style.display = 'block';
+        formTitle.textContent = 'Automatize seus processos';
+        break;
+      case 'raas':
+        document.getElementById('raas').style.display = 'block';
+        formTitle.textContent = 'Robôs como Serviço (RaaS)';
+        break;
+      case 'suporte-corretivo':
+        document.getElementById('suporte-corretivo').style.display = 'block';
+        formTitle.textContent = 'Suporte Corretivo';
+        break;
+      case 'suporte-preditivo':
+        document.getElementById('suporte-preditivo').style.display = 'block';
+        formTitle.textContent = 'Suporte Preditivo';
+        break;
+      case 'sustentacao':
+        document.getElementById('sustentacao').style.display = 'block';
+        formTitle.textContent = 'Sustentação de Sistemas';
+        break;
+      case 'trabalhe-conosco':
+        document.getElementById('trabalhe-conosco').style.display = 'block';
+        formTitle.textContent = 'Trabalhe Conosco';
+        break;
+      default:
+        formTitle.textContent = 'Formulário não encontrado';
+        break;
     }
+  }
 
-    window.onload = showFormFromURL;
-  </script>
-  
-  <!-- Outros scripts para o funcionamento -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  // Chama a função assim que a página carrega
+  window.onload = showFormFromURL;
+</script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // JavaScript para atualizar o texto do input de arquivo
+  const fileInput = document.getElementById('cvInput');
+  const fileLabel = document.getElementById('fileLabel');
+
+  // Função que é chamada quando um arquivo é selecionado
+  fileInput.addEventListener('change', function () {
+    if (fileInput.files.length > 0) {
+      fileLabel.textContent = fileInput.files[0].name; // Mostra o nome do arquivo
+    } else {
+      fileLabel.textContent = 'Adicione um arquivo'; // Mostra o texto quando nenhum arquivo é selecionado
+    }
+  });
+</script>
 </body>
+
 </html>
