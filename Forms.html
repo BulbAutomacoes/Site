@@ -8,7 +8,58 @@
   <link href="css/style.css" rel="stylesheet" />
   <script src="js/jquery-3.4.1.min.js"></script>
   <script src="js/bootstrap.js"></script>
+  
+  <style>
+    /* Adicionando algumas regras para manter a consistência com o estilo de pop-up */
+    .popup-overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    .popup-content {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(248, 244, 244, 0.9);
+      padding: 2rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+      border-radius: 0.5rem;
+      z-index: 1001;
+      max-width: 90%;
+      width: 30rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    .btn-2 {
+      font-weight: 400;
+      font-size: 1.3rem;
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      background-color: #FF0000;
+      color: #ffffff;
+      transition: all 0.3s;
+      border: 0.1rem solid transparent;
+    }
+
+    .btn-2:hover {
+      background-color: transparent;
+      border-color: #FF0000;
+      color: #FF0000;
+    }
+  </style>
 </head>
+
 <body>
 
   <!-- Botões para selecionar o formulário -->
@@ -22,7 +73,7 @@
   </div>
 
   <!-- Formulário de contato -->
-  <section class="contact_section">
+  <section class="contact_section layout_padding">
     <div class="container">
       <div id="rpaForm" class="form-group" style="display: none;">
         <h3>Formulário de RPA</h3>
@@ -33,7 +84,7 @@
           <input type="text" name="Automacao" placeholder="Já possui automação?" />
           <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
           <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
-          <button type="submit">Enviar</button>
+          <button class="btn-2" type="submit">Enviar</button>
         </form>
       </div>
 
@@ -43,7 +94,7 @@
           <input type="text" name="Nome" placeholder="Seu nome (RaaS)" required />
           <input type="email" name="Email" placeholder="Seu e-mail" required />
           <textarea name="Problema" placeholder="Descreva seu problema" required></textarea>
-          <button type="submit">Enviar</button>
+          <button class="btn-2" type="submit">Enviar</button>
         </form>
       </div>
 
@@ -54,7 +105,7 @@
           <input type="email" name="Email" placeholder="E-mail" required />
           <input type="text" name="Produto" placeholder="Produto de interesse" required />
           <input type="text" name="Orcamento" placeholder="Orçamento desejado" />
-          <button type="submit">Enviar</button>
+          <button class="btn-2" type="submit">Enviar</button>
         </form>
       </div>
 
@@ -64,7 +115,7 @@
           <input type="text" name="Nome" placeholder="Seu nome (Preditivo)" required />
           <input type="email" name="Email" placeholder="Seu e-mail" required />
           <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
-          <button type="submit">Enviar</button>
+          <button class="btn-2" type="submit">Enviar</button>
         </form>
       </div>
 
@@ -74,7 +125,7 @@
           <input type="text" name="Nome" placeholder="Seu nome (Sustentação)" required />
           <input type="email" name="Email" placeholder="Seu e-mail" required />
           <input type="file" name="CV" accept=".pdf,.doc,.docx" required />
-          <button type="submit">Enviar</button>
+          <button class="btn-2" type="submit">Enviar</button>
         </form>
       </div>
     </div>
@@ -88,10 +139,10 @@
       forms.forEach(function(id) {
         document.getElementById(id).style.display = "none";
       });
-    
+
       // Exibe o formulário selecionado
       document.getElementById(formId).style.display = "block";
     }
-
+  </script>
 </body>
 </html>
