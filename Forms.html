@@ -1,97 +1,259 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulário específico</title>
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+
+  <title>Bulb Automações</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom Styles -->
   <link href="css/style.css" rel="stylesheet" />
-  <script src="js/jquery-3.4.1.min.js"></script>
-  <script src="js/bootstrap.js"></script>
+  <link href="css/responsive.css" rel="stylesheet" />
+
+  <!-- Pop-up Styles -->
+  <style>
+    /* Fundo do pop-up */
+    .popup-overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    /* Estilo do pop-up */
+    .popup-content {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(248, 244, 244, 0.9);
+      padding: 2rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+      border-radius: 0.5rem;
+      z-index: 1001;
+      max-width: 90%;
+      width: 30rem;
+
+      /* Flexbox para centralizar o conteúdo */
+      display: flex;
+      flex-direction: column; /* Alinhar itens verticalmente */
+      align-items: center; /* Centralizar horizontalmente */
+      justify-content: center; /* Centralizar verticalmente */
+      gap: 1rem; /* Espaçamento entre itens */
+    }
+
+    /* Botão de fechar */
+    .close-btn {
+      align-self: flex-end;
+      cursor: pointer;
+      font-size: 3rem;
+      color: #555;
+    }
+
+    /* Botão principal */
+    .btn-2 {
+      font-weight: 400;
+      font-size: 1.3rem;
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      background-color: #FF0000;
+      color: #ffffff;
+      transition: all 0.3s;
+      border: 0.1rem solid transparent;
+    }
+
+    .btn-2:hover {
+      background-color: transparent;
+      border-color: #FF0000;
+      color: #FF0000;
+    }
+
+    /* Adaptações responsivas para telas menores */
+    @media (max-width: 768px) {
+      .popup-content {
+        width: 90%;
+        padding: 1.5rem;
+      }
+
+      .btn-2 {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.2rem;
+      }
+
+    }
+
+    @media (max-width: 480px) {
+      .popup-content {
+        padding: 1rem;
+      }
+
+      .close-btn {
+        font-size: 2.5rem;
+      }
+    }
+
+  </style>
 </head>
+
 <body>
 
-  <!-- Botões para selecionar o formulário -->
-  <div class="container">
-    <h2>Escolha um formulário</h2>
-    <button class="btn btn-primary" onclick="showForm('rpaForm')">RPA</button>
-    <button class="btn btn-primary" onclick="showForm('raasForm')">RaaS</button>
-    <button class="btn btn-primary" onclick="showForm('corretiveForm')">Suporte Corretivo</button>
-    <button class="btn btn-primary" onclick="showForm('preditiveForm')">Suporte Preditivo</button>
-    <button class="btn btn-primary" onclick="showForm('jobForm')">Sustentação</button>
-  </div>
-
-  <!-- Formulário de contato -->
-  <section class="contact_section">
-    <div class="container">
-      <div id="rpaForm" class="form-group" style="display: none;">
-        <h3>Formulário de RPA</h3>
-        <form action="https://formspree.io/f/mqaeddev" method="POST">
-          <input type="text" name="Nome" placeholder="Nome ou empresa (RPA)" required />
-          <input type="email" name="Email" placeholder="E-mail" required />
-          <input type="text" name="Telefone" placeholder="Telefone" required />
-          <input type="text" name="Automacao" placeholder="Já possui automação?" />
-          <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
-          <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-
-      <div id="raasForm" class="form-group" style="display: none;">
-        <h3>Formulário de RaaS</h3>
-        <form action="https://formspree.io/f/mqaeddev" method="POST">
-          <input type="text" name="Nome" placeholder="Seu nome (RaaS)" required />
-          <input type="email" name="Email" placeholder="Seu e-mail" required />
-          <textarea name="Problema" placeholder="Descreva seu problema" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-
-      <div id="corretiveForm" class="form-group" style="display: none;">
-        <h3>Formulário de Suporte Corretivo</h3>
-        <form action="https://formspree.io/f/mqaeddev" method="POST">
-          <input type="text" name="Nome" placeholder="Nome da empresa (Corretivo)" required />
-          <input type="email" name="Email" placeholder="E-mail" required />
-          <input type="text" name="Produto" placeholder="Produto de interesse" required />
-          <input type="text" name="Orcamento" placeholder="Orçamento desejado" />
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-
-      <div id="preditiveForm" class="form-group" style="display: none;">
-        <h3>Formulário de Suporte Preditivo</h3>
-        <form action="https://formspree.io/f/mqaeddev" method="POST">
-          <input type="text" name="Nome" placeholder="Seu nome (Preditivo)" required />
-          <input type="email" name="Email" placeholder="Seu e-mail" required />
-          <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
-          <button type="submit">Enviar</button>
-        </form>
-      </div>
-
-      <div id="jobForm" class="form-group" style="display: none;">
-        <h3>Formulário de Sustentação</h3>
-        <form action="https://formspree.io/f/mqaeddev" method="POST">
-          <input type="text" name="Nome" placeholder="Seu nome (Sustentação)" required />
-          <input type="email" name="Email" placeholder="Seu e-mail" required />
-          <input type="file" name="CV" accept=".pdf,.doc,.docx" required />
-          <button type="submit">Enviar</button>
-        </form>
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <div class="img-box">
+        <img src="images/hero-bg.jpeg" alt="">
       </div>
     </div>
-  </section>
 
-  <script>
-    // Função para exibir o formulário específico com base no botão clicado
-    function showForm(formId) {
-      // Esconde todos os formulários
-      var forms = ["rpaForm", "raasForm", "corretiveForm", "preditiveForm", "jobForm"];
-      forms.forEach(function(id) {
-        document.getElementById(id).style.display = "none";
-      });
-    
-      // Exibe o formulário selecionado
-      document.getElementById(formId).style.display = "block";
-    }
-  </script>
+    <header class="header_section">
+      <div class="header_top">
+        <div class="container-fluid">
+          <div class="contact_link-container">
+            <a href="index.html" class="contact_link1">
+              <img src="images/Logo2.png" alt="Ícone" class="icon">
+            </a>
+            <a class="contact_link2">
+              <span class="navbar-brand" style="color: #FF0000; text-align:center; margin-left: 10%">
+                Se o seu desejo é tecnologia, nós realizamos
+              </span>
+            </a>
+            <a href="mailto:contato@bulbautomacoes.com.br?subject=Quero%20Automatizar" class="contact_link3">
+              <i class="fa fa-envelope" aria-hidden="true"></i>
+              <span>
+                contato@bulbautomacoes.com.br
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container">
+            <a class="navbar-brand" href="index.html"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""></span>
+            </button>
+
+            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html">Home  <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="sobre-nos.html">Sobre Nós</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Serviços
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #1c1c1c !important; backdrop-filter: blur(10px);">
+                    <li><a class="dropdown-item" href="LadinPages/automacao-de-processos-virtuais.html" style="color: white !important; padding: 10px;">Automação de processos virtuais</a></li>
+                    <li><a class="dropdown-item" href="LadinPages/robos-como-servico.html" style="color: white !important; padding: 10px;">Robôs como serviço</a></li>
+                    <li><a class="dropdown-item" href="LadinPages/suporte-&-sustentacao.html" style="color: white !important; padding: 10px;">Suporte e Sustentação</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="parceiros.html">Seja Parceiro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Forms.html">Trabalhe Conosco</a>
+                </li>
+                <li class="nav-item" style="background-color: red;">
+                  <a class="nav-link" href="https://wa.me/5511948798009?text=Olá,%20Bulb!%20Desejo%20automatizar%20processos.">Quero Automatizar</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <section class="contact_section layout_padding">
+      <div class="contact_bg_box" style="background-color: white;"></div>
+      <div class="container">
+        <div class="heading_container heading_center">
+          <h2>Contate-nos</h2>
+        </div>
+        <div class="row">
+          <div class="col-md-7 mx-auto">
+            <label for="formType">Escolha o tipo de formulário:</label>
+            <select id="formType" onchange="changeForm()">
+              <option value="default">RPA</option>
+              <option value="support">RAAS</option>
+              <option value="sales">Suporte Corretivo</option>
+              <option value="feedback">Suporte Preditivo</option>
+              <option value="job">Sustentação</option>
+              <option value="job">Trabalhe Conosco</option>
+            </select>
+
+            <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
+              <div class="contact_form-container">
+                <div id="defaultForm" class="form-group">
+                  <input type="text" name="Nome" placeholder="Nome ou empresa" required />
+                  <input type="email" name="Email" placeholder="E-mail" required />
+                  <input type="phone" name="Telefone" placeholder="Telefone" required />
+                  <input type="text" name="Automacao" placeholder="Já possui automação?" />
+                  <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
+                  <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
+                </div>
+
+                <div id="supportForm" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Seu nome" required />
+                  <input type="email" name="Email" placeholder="Seu e-mail" required />
+                  <textarea name="Problema" placeholder="Descreva seu problema" required></textarea>
+                </div>
+
+                <div id="salesForm" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Nome da empresa" required />
+                  <input type="email" name="Email" placeholder="E-mail" required />
+                  <input type="text" name="Produto" placeholder="Produto de interesse" required />
+                  <input type="text" name="Orcamento" placeholder="Orçamento desejado" />
+                </div>
+
+                <div id="feedbackForm" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Seu nome" required />
+                  <input type="email" name="Email" placeholder="Seu e-mail" required />
+                  <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
+                </div>
+
+                <div id="jobForm" class="form-group" style="display: none;">
+                  <input type="text" name="Nome" placeholder="Seu nome" required />
+                  <input type="email" name="Email" placeholder="Seu e-mail" required />
+                  <input type="file" name="CV" accept=".pdf,.doc,.docx" required />
+                </div>
+
+                <div class="btn-box">
+                  <button type="submit">Enviar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/+5511948798009" target="_blank" style="position: fixed; bottom: 1.5rem; right: 1.5rem; background-color: #25d366; color: white; width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1); text-decoration: none; z-index: 1000;" id="whatsapp-button">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="width: 1.8rem; height: 1.8rem; fill: white;">
+        <path d="M16.003 3A12.942 12.942 0 0 0 3 16c0 2.293.614 4.533 1.777 6.489L3 29l6.648-1.735A12.94 12.94 0 0 0 16.003 29c7.18 0 13-5.82 13-13s-5.82-13-13-13zm0 2C22.076 5 27 9.923 27 16c0 6.075-4.924 11-10.997 11a10.89 10.89 0 0 1-4.768-1.108l-.356-.184-4.178 1.09 1.15-4.123-1.418-.67A9.935 9.935 0 0 1 9 16C9 9.923 13.924 5 16.003 5z"></path>
+      </svg>
+    </a>
+  </div>
 </body>
+
 </html>
