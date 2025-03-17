@@ -265,28 +265,31 @@
   </div>
 
 <script>
-  function changeForm() {
-    // Obtém o valor selecionado no menu suspenso
-    var selectedForm = document.getElementById("formType").value;
+  // Função para exibir o formulário baseado no parâmetro da URL
+  function showFormFromURL() {
+    // Obtém o parâmetro da URL (ex: ?form=raas)
+    const urlParams = new URLSearchParams(window.location.search);
+    const formType = urlParams.get('form'); // Obtém o valor do parâmetro 'form'
 
-    // Esconde todos os formulários
+    // Oculta todos os formulários
     var forms = document.querySelectorAll('.form-group');
     forms.forEach(function(form) {
       form.style.display = 'none';
     });
 
-    // Exibe o formulário correspondente ao valor selecionado
-    var selectedFormElement = document.getElementById(selectedForm);
-    if (selectedFormElement) {
-      selectedFormElement.style.display = 'block';
+    // Exibe o formulário com o ID correspondente ao parâmetro
+    if (formType) {
+      var selectedFormElement = document.getElementById(formType);
+      if (selectedFormElement) {
+        selectedFormElement.style.display = 'block';
+      }
     }
   }
 
-  // Chama a função changeForm inicialmente para garantir que o formulário correto seja mostrado
-  window.onload = function() {
-    changeForm();
-  }
+  // Chama a função ao carregar a página
+  window.onload = showFormFromURL;
 </script>
+
 
 </body>
 
