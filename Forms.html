@@ -274,13 +274,15 @@
                   <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
                 </div>
 
-              <div id="trabalhe-conosco" class="form-group" style="display: none; margin-top: 50px;">
-                <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
-                <input type="email" name="Email" placeholder="Seu e-mail" required />
-                <!-- Input de Arquivo com Estilo Personalizado -->
-                <label for="cvInput" id="fileLabel">Adicione um arquivo</label>
-                <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required />
-              </div>
+             <div id="trabalhe-conosco" class="form-group" style="display: none;">
+              <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
+              <input type="email" name="Email" placeholder="Seu e-mail" required />
+              
+              <!-- Adicionando uma margem inferior para espaçar -->
+              <label for="cvInput" id="fileLabel" style="margin-top: 15px;">Adicione um arquivo</label>
+              <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required />
+            </div>
+
 
                 <div class="btn-box">
                   <button type="submit">Enviar</button>
