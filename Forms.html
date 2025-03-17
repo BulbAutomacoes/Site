@@ -84,15 +84,14 @@
     // Função para exibir o formulário específico com base no botão clicado
     function showForm(formId) {
       // Esconde todos os formulários
-      var forms = ["defaultForm", "supportForm", "salesForm", "feedbackForm", "jobForm"];
+      var forms = ["rpaForm", "raasForm", "corretiveForm", "preditiveForm", "jobForm"];
       forms.forEach(function(id) {
         document.getElementById(id).style.display = "none";
       });
-
+    
       // Exibe o formulário selecionado
       document.getElementById(formId).style.display = "block";
     }
-  </script>
 
 </body>
 </html>
