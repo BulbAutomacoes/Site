@@ -1,149 +1,249 @@
-<section class="contact_section layout_padding">
-  <div class="contact_bg_box" style="background-color: white;"></div>
-  <div class="container">
-    <div class="heading_container heading_center">
-      <h2 id="formTitle">Contate-nos</h2>
-    </div>
-    <div class="row">
-      <div class="col-md-7 mx-auto">
-        <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
-          <div class="contact_form-container">
-            <!-- Formulário Automatizar -->
-            <div id="automatizar" class="form-group" style="display: none;">
-              <input type="text" name="Nome" placeholder="Nome" required />
-              <input type="text" name="Empresa" placeholder="Empresa" required />
-              <input type="text" name="Cargo" placeholder="Cargo" required />
-              <input type="email" name="Email" placeholder="E-mail" required />
-              <input type="phone" name="Telefone" placeholder="Telefone" required />
-              <input type="text" name="Automacao" placeholder="Você será o único responsável pelo projeto de implantação de automações?" />
-              <input type="text" name="Automacao" placeholder="Sua organização já possui processos virtuais automatizados?" />
-              <input type="text" name="Interesse" placeholder="Quantos processos pretende automatizar?" />
-            </div>
+<!DOCTYPE html>
+<html lang="pt">
 
-            <!-- Formulário RaaS -->
-            <div id="raas" class="form-group" style="display: none;">
-              <input type="text" name="Nome" placeholder="Nome ou empresa (RaaS)" required />
-              <input type="email" name="Email" placeholder="E-mail" required />
-              <input type="phone" name="Telefone" placeholder="Telefone" required />
-              <input type="text" name="Automacao" placeholder="Já possui automação?" />
-              <input type="text" name="Interesse" placeholder="Tenho interesse em..." />
-              <input type="text" name="Mensagem" placeholder="Mensagem" class="message_input" />
-            </div>
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
-            <!-- Formulário Organizar e Automatizar -->
-            <div id="organizar-e-automatizar" class="form-group" style="display: none;">
-              <input type="text" name="Nome" placeholder="Nome (Organizar e Automatizar)" required />
-              <input type="email" name="Email" placeholder="E-mail" required />
-              <input type="text" name="Empresa" placeholder="Empresa" required />
-              <input type="phone" name="Telefone" placeholder="Telefone" required />
-              <input type="text" name="Objetivo" placeholder="Qual o objetivo da sua organização ao automatizar processos?" />
-              <input type="text" name="Automacao" placeholder="Já possui algum processo automatizado?" />
-              <input type="text" name="Expectativa" placeholder="Quais suas expectativas ao implementar a automação?" />
-            </div>
+  <title>Bulb Automações</title>
 
-            <!-- Formulário Organizar RaaS -->
-            <div id="organizar-e-automatizar-raas" class="form-group" style="display: none;">
-              <input type="text" name="Nome" placeholder="Nome (Organizar RaaS)" required />
-              <input type="email" name="Email" placeholder="E-mail" required />
-              <input type="text" name="Empresa" placeholder="Empresa" required />
-              <input type="phone" name="Telefone" placeholder="Telefone" required />
-              <input type="text" name="Automacao" placeholder="Você já utiliza algum serviço RaaS?" />
-              <input type="text" name="Interesse" placeholder="Quais processos você deseja automatizar?" />
-              <input type="text" name="Suporte" placeholder="Você precisa de suporte contínuo após a automação?" />
-            </div>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.css" />
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+  <!-- Custom Styles -->
+  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/responsive.css" rel="stylesheet" />
 
-            <!-- Formulário Suporte Corretivo -->
-            <div id="suporte-corretivo" class="form-group" style="display: none;">
-              <input type="text" name="Nome" placeholder="Seu nome (Corretivo)" required />
-              <input type="email" name="Email" placeholder="Seu e-mail" required />
-              <textarea name="Problema" placeholder="Descreva seu problema" required></textarea>
-            </div>
+  <!-- Pop-up Styles -->
+  <style>
+    /* Fundo do pop-up */
+    .popup-overlay {
+      display: block;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(211, 211, 211, 1);
+      z-index: 1000;
+    }
 
-            <!-- Formulário Suporte Preditivo -->
-            <div id="suporte-preditivo" class="form-group" style="display: none;">
-              <input type="text" name="Nome" placeholder="Nome da empresa (Preditivo)" required />
-              <input type="email" name="Email" placeholder="E-mail" required />
-              <input type="text" name="Produto" placeholder="Produto de interesse" required />
-              <input type="text" name="Orcamento" placeholder="Orçamento desejado" />
-            </div>
+    .btn-box button {
+      border-radius: 3px;
+      padding: 10px 20px;
+      background-color: #ffffff;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
 
-            <!-- Formulário Sustentação -->
-            <div id="sustentacao" class="form-group" style="display: none;">
-              <input type="text" name="Nome" placeholder="Seu nome (Sustentação)" required />
-              <input type="email" name="Email" placeholder="Seu e-mail" required />
-              <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
-            </div>
+    /* Efeito ao passar o mouse */
+    .btn-box button:hover {
+      background-color: #e60000;
+    }
+    /* Estilo do pop-up */
+    .popup-content {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(248, 244, 244, 0.9);
+      padding: 2rem;
+      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+      border-radius: 0.5rem;
+      z-index: 1001;
+      max-width: 90%;
+      width: 30rem;
+    }
 
-            <!-- Formulário Trabalhe Conosco -->
-            <div id="trabalhe-conosco" class="form-group" style="display: none;">
-              <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
-              <input type="email" name="Email" placeholder="Seu e-mail" required />
-              <label for="cvInput" id="fileLabel" style="margin-top: 15px;">Adicione um arquivo</label>
-              <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required />
-            </div>
+    /* Botão de fechar */
+    .close-btn {
+      align-self: flex-end;
+      cursor: pointer;
+      font-size: 3rem;
+      color: #555;
+    }
 
-            <div class="btn-box">
-              <button type="submit">Enviar</button>
+    /* Botão principal */
+    .btn-2 {
+      font-weight: 400;
+      font-size: 1.3rem;
+      display: inline-block;
+      padding: 1rem 1.5rem;
+      background-color: #FF0000;
+      color: #ffffff;
+      transition: all 0.3s;
+      border: 0.1rem solid transparent;
+    }
+
+    .btn-2:hover {
+      background-color: transparent;
+      border-color: #FF0000;
+      color: #FF0000;
+    }
+
+    @media (max-width: 768px) {
+      .popup-content {
+        width: 90%;
+        padding: 1.5rem;
+      }
+
+      .btn-2 {
+        font-size: 1.1rem;
+        padding: 0.8rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .popup-content {
+        padding: 1rem;
+      }
+
+      .close-btn {
+        font-size: 2.5rem;
+      }
+    }
+
+    /* Estilo para o botão de upload */
+    #fileLabel {
+      display: inline-block;
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Efeito ao passar o mouse */
+    #fileLabel:hover {
+      background-color: #555;
+    }
+
+    /* Remover o botão de arquivo real */
+    #cvInput {
+      display: none;
+    }
+
+    /* Estilo para o formulário */
+    .form-group {
+      margin: 20px 0;
+    }
+
+    input[type="text"], input[type="email"], input[type="phone"], textarea{
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1.2px solid #ccc;
+      border-radius: 2px;
+      font-color: #000;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hero_area">
+    <!-- O conteúdo da hero área vai aqui -->
+  </div>
+
+  <section class="contact_section layout_padding">
+    <div class="contact_bg_box" style="background-color: white;"></div>
+    <div class="container">
+      <div class="heading_container heading_center">
+        <h2 id="formTitle">Contate-nos</h2>
+      </div>
+      <div class="row">
+        <div class="col-md-7 mx-auto">
+          <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
+            <div class="contact_form-container">
+
+              <!-- Formulário Organizar e Automatizar -->
+              <div id="organizar-e-automatizar" class="form-group" style="display: none;">
+                <input type="text" name="Nome" placeholder="Nome" required />
+                <input type="text" name="Empresa" placeholder="Empresa" required />
+                <input type="text" name="Cargo" placeholder="Cargo" required />
+                <input type="email" name="Email" placeholder="E-mail" required />
+                <input type="phone" name="Telefone" placeholder="Telefone" required />
+                <input type="text" name="Objetivo" placeholder="Qual seu objetivo principal?" required />
+              </div>
+
+              <!-- Formulário Organizar RaaS -->
+              <div id="organizar-e-automatizar-raas" class="form-group" style="display: none;">
+                <input type="text" name="Nome" placeholder="Nome ou Empresa" required />
+                <input type="email" name="Email" placeholder="E-mail" required />
+                <input type="phone" name="Telefone" placeholder="Telefone" required />
+                <input type="text" name="Interesse" placeholder="Qual serviço tem interesse?" required />
+                <textarea name="Mensagem" placeholder="Mensagem" required></textarea>
+              </div>
+
+              <!-- Outros formulários já existentes -->
+              <div id="automatizar" class="form-group" style="display: none;">
+                <input type="text" name="Nome" placeholder="Nome" required />
+                <input type="text" name="Empresa" placeholder="Empresa" required />
+                <input type="text" name="Cargo" placeholder="Cargo" required />
+                <input type="email" name="Email" placeholder="E-mail" required />
+                <input type="phone" name="Telefone" placeholder="Telefone" required />
+                <input type="text" name="Automacao" placeholder="Você será o único responsável pelo projeto de implantação de automações?" />
+                <input type="text" name="Automacao" placeholder="Sua organização já possui processos virtuais automatizados?" />
+                <input type="text" name="Interesse" placeholder="Quantos processos pretende automatizar?" />
+              </div>
+
+              <div class="btn-box">
+                <button type="submit">Enviar</button>
+              </div>
             </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<script>
-  // Função para exibir o formulário baseado no parâmetro da URL e atualizar o título
-  function showFormFromURL() {
-    const urlParams = new URLSearchParams(window.location.search);
-    const formType = urlParams.get('form');
+  <script>
+    // Função para exibir o formulário baseado no parâmetro da URL e atualizar o título
+    function showFormFromURL() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const formType = urlParams.get('form'); // Obtém o valor do parâmetro 'form'
 
-    // Oculta todos os formulários
-    var forms = document.querySelectorAll('.form-group');
-    forms.forEach(function(form) {
-      form.style.display = 'none';
-    });
+      var forms = document.querySelectorAll('.form-group');
+      forms.forEach(function(form) {
+        form.style.display = 'none';
+      });
 
-    // Atualiza o título com base no tipo de formulário
-    const formTitle = document.getElementById('formTitle');
-    switch (formType) {
-      case 'automatizar':
-        document.getElementById('automatizar').style.display = 'block';
-        formTitle.textContent = 'Automatize seus processos';
-        break;
-      case 'raas':
-        document.getElementById('raas').style.display = 'block';
-        formTitle.textContent = 'Robôs como Serviço (RaaS)';
-        break;
-      case 'organizar-e-automatizar':
-        document.getElementById('organizar-e-automatizar').style.display = 'block';
-        formTitle.textContent = 'Organizar e Automatizar';
-        break;
-      case 'organizar-e-automatizar-raas':
-        document.getElementById('organizar-e-automatizar-raas').style.display = 'block';
-        formTitle.textContent = 'Organizar RaaS';
-        break;
-      case 'suporte-corretivo':
-        document.getElementById('suporte-corretivo').style.display = 'block';
-        formTitle.textContent = 'Suporte Corretivo';
-        break;
-      case 'suporte-preditivo':
-        document.getElementById('suporte-preditivo').style.display = 'block';
-        formTitle.textContent = 'Suporte Preditivo';
-        break;
-      case 'sustentacao':
-        document.getElementById('sustentacao').style.display = 'block';
-        formTitle.textContent = 'Sustentação de Sistemas';
-        break;
-      case 'trabalhe-conosco':
-        document.getElementById('trabalhe-conosco').style.display = 'block';
-        formTitle.textContent = 'Trabalhe Conosco';
-        break;
-      default:
-        formTitle.textContent = 'Formulário não encontrado';
-        break;
+      const formTitle = document.getElementById('formTitle');
+      switch (formType) {
+        case 'automatizar':
+          document.getElementById('automatizar').style.display = 'block';
+          formTitle.textContent = 'Automatize seus processos';
+          break;
+        case 'organizar-e-automatizar':
+          document.getElementById('organizar-e-automatizar').style.display = 'block';
+          formTitle.textContent = 'Organizar e Automatizar';
+          break;
+        case 'organizar-e-automatizar-raas':
+          document.getElementById('organizar-e-automatizar-raas').style.display = 'block';
+          formTitle.textContent = 'Organizar RaaS';
+          break;
+        default:
+          formTitle.textContent = 'Formulário não encontrado';
+          break;
+      }
     }
-  }
 
-  window.onload = showFormFromURL;
-</script>
+    window.onload = showFormFromURL;
+  </script>
+  
+  <!-- Outros scripts para o funcionamento -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
