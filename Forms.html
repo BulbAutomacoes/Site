@@ -134,6 +134,39 @@
     #fileLabel:active {
       background-color: #cc0000; /* Cor de fundo mais escura quando pressionado */
     }
+
+    /* Ajuste geral do formulário */
+    .contact_form-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 2rem;
+    }
+
+    .contact_form-container input {
+      width: 100%;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border-radius: 5px;
+      border: 1px solid #ddd;
+    }
+
+    .contact_form-container button {
+      width: 100%;
+      padding: 1rem;
+      background-color: #FF0000;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      margin-top: 1rem;
+    }
+
+    .contact_form-container button:hover {
+      background-color: #cc0000;
+    }
   </style>
 </head>
 
@@ -167,78 +200,23 @@
           </div>
         </div>
       </div>
-
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container">
-            <a class="navbar-brand" href="index.html"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""></span>
-            </button>
-
-            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home  <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sobre-nos.html">Sobre Nós</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Serviços
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" 
-                      style="background-color: #1c1c1c !important; backdrop-filter: blur(10px);">
-                    <li><a class="dropdown-item" href="LadinPages/automacao-de-processos-virtuais.html" 
-                           style="color: white !important; padding: 10px; display: block; background-color: #1c1c1c !important;"
-                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
-                           onmouseout="this.style.background='#1c1c1c'">Automação de processos virtuais</a></li>
-                    <li><a class="dropdown-item" href="LadinPages/robos-como-servico.html" 
-                           style="color: white !important; padding: 10px; display: block; background-color: #1c1c1c !important;"
-                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
-                           onmouseout="this.style.background='#1c1c1c'">Robôs como serviço</a></li>
-                    <li><a class="dropdown-item" href="LadinPages/suporte-&-sustentacao.html" 
-                           style="color: white !important; padding: 10px; display: block; background-color: #1c1c1c !important;"
-                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
-                           onmouseout="this.style.background='#1c1c1c'">Suporte e Sustentação</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="parceiros.html">Seja Parceiro</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="Forms.html">Trabalhe Conosco</a>
-                </li>
-                <li class="nav-item" style="background-color: red;">
-                  <a class="nav-link" href="https://wa.me/5511948798009?text=Olá,%20Bulb!%20Desejo%20automatizar%20processos.">Quero Automatizar</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </div>
-      </div>
     </header>
 
     <section class="contact_section layout_padding">
-      <div class="contact_bg_box" style="background-color: white;"></div>
       <div class="container">
         <div class="heading_container heading_center">
-          <!-- Título dinâmico será inserido aqui -->
           <h2 id="formTitle">Contate-nos</h2>
         </div>
         <div class="row">
           <div class="col-md-7 mx-auto">
             <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
               <div class="contact_form-container">
-                <div id="trabalhe-conosco" class="form-group" style="display: none;">
+                <div id="trabalhe-conosco" class="form-group">
                   <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
                   <input type="email" name="Email" placeholder="Seu e-mail" required />
-                  <!-- Botão com a frase "Adicione um arquivo" -->
                   <label for="cvInput" id="fileLabel">Adicione um arquivo</label>
                   <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required style="display: none;" />
                 </div>
-
                 <div class="btn-box">
                   <button type="submit">Enviar</button>
                 </div>
@@ -249,12 +227,6 @@
       </div>
     </section>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/+5511948798009" target="_blank" style="position: fixed; bottom: 1.5rem; right: 1.5rem; background-color: #25d366; color: white; width: 3.5rem; height: 3.5rem; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.1); text-decoration: none; z-index: 1000;" id="whatsapp-button">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" style="width: 1.8rem; height: 1.8rem; fill: white;">
-        <path d="M16.003 3A12.942 12.942 0 0 0 3 16c0 2.293.614 4.533 1.777 6.489L3 29l6.648-1.735A12.94 12.94 0 0 0 16.003 29c7.18 0 13-5.82 13-13s-5.82-13-13-13zm0 2C22.076 5 26 8.924 26 12.999S22.076 21 16.003 21a12.932 12.932 0 0 1-5.16-1.125l-.91-.42-2.465 1.732c-.6.421-.91.573-1.386.73l-.843.253 1.577-4.617-.18-.877-.683-.77A10.903 10.903 0 0 1 16.003 7z"/>
-      </svg>
-    </a>
   </div>
 
   <script>
