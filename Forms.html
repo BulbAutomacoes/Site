@@ -265,6 +265,8 @@
                   <input type="text" name="Prazo Início" placeholder="Qual o prazo que sua empresa tem para iniciar o projeto de automatização?" />
                   <input type="text" name="Prazo Fim" placeholder="Quando planejam concluír esse projeto?" />
                   <input type="text" name="Complemento" placeholder="Se houver mais pessoas envolvidas no projeto, por favor, informe os e-mails" />
+                  <textarea name="Contexto" placeholder="Fique à vontade para agregar informações adiconais" required></textarea>
+                  <input type="submit" value="Enviar" />
                 </div>
 
                 <div id="organizar-e-automatizar" class="form-group" style="display: none;">
@@ -279,6 +281,8 @@
                   <input type="text" name="Prazo Início" placeholder="Qual o prazo que sua empresa tem para iniciar o projeto de automatização?" />
                   <input type="text" name="Prazo Fim" placeholder="Quando planejam concluír esse projeto?" />
                   <input type="text" name="Complemento" placeholder="Se houver mais pessoas envolvidas no projeto, por favor, informe os e-mails" />
+                  <textarea name="Contexto" placeholder="Fique à vontade para agregar informações adiconais" required></textarea>
+                  <input type="submit" value="Enviar" />
                 </div>
 
                 <div id="raas" class="form-group" style="display: none;">
@@ -294,6 +298,8 @@
                   <input type="text" name="Prazo Início" placeholder="Qual o prazo que sua empresa tem para iniciar o projeto de automatização?" />
                   <input type="text" name="Prazo Fim" placeholder="Quando planejam concluír esse projeto?" />
                   <input type="text" name="Complemento" placeholder="Se houver mais pessoas envolvidas no projeto, por favor, informe os e-mails" />
+                  <textarea name="Contexto" placeholder="Fique à vontade para agregar informações adiconais" required></textarea>
+                  <input type="submit" value="Enviar" />
                 </div>
                 
                 <div id="organizar-e-automatizar-raas" class="form-group" style="display: none;">
@@ -308,6 +314,8 @@
                   <input type="text" name="Prazo Início" placeholder="Qual o prazo que sua empresa tem para iniciar o projeto de automatização?" />
                   <input type="text" name="Prazo Fim" placeholder="Quando planejam concluír esse projeto?" />
                   <input type="text" name="Complemento" placeholder="Se houver mais pessoas envolvidas no projeto, por favor, informe os e-mails" />
+                  <textarea name="Contexto" placeholder="Fique à vontade para agregar informações adiconais" required></textarea>
+                  <input type="submit" value="Enviar" />
                 </div>
 
                 <div id="suporte-corretivo" class="form-group" style="display: none;">
@@ -319,20 +327,9 @@
                   <input type="phone" name="Telefone" placeholder="Telefone" required />
                   <input type="text" name="Cargo" placeholder="Quantos robôs personalizados sua empresa possui?" required />
                   <input type="text" name="Cargo" placeholder="A quanto tempo em média os robôs foram desenvolvidos?" required />
-                  
-                  <!-- Alteração aqui: lista de opções Sim/Não -->
-                  <label for="manutencao-anterior">Já houve alguma manutenção anteriormente em algum dos robôs?</label>
-                  <select id="manutencao-anterior" name="manutencao-anterio" required>
-                    <option value="">Selecione</option>
-                    <option value="sim">Sim</option>
-                    <option value="nao">Não</option>
-                  </select>
-                  
-                  <!-- Esta pergunta só aparecerá se a resposta for "Sim" -->
-                  <div id="ultima-manutencao" style="display:none;">
-                    <input type="text" name="Cargo" placeholder="A quanto tempo foi a última manutenção?" required />
-                  </div>
+                  <input type="text" name="Cargo" placeholder="Quando ocorreu as últimas manutenções? (Se houveram)" />
                   <input type="text" name="Cargo" placeholder="Os problemas nos robôs já foram identificados?" required />
+                  <textarea name="Contexto" placeholder="Fique à vontade para agregar informações adiconais" required></textarea>
                   <input type="submit" value="Enviar" />
                 </div>
 
@@ -347,22 +344,32 @@
                   <input type="text" name="Cargo" placeholder="A quanto tempo em média os robôs foram desenvolvidos?" required />
                   <input type="text" name="Cargo" placeholder="Já houve alguma revisão preditiva anteriormente? Se sim, a quanto tempo?" required />
                   <input type="text" name="Cargo" placeholder="Ocorre algum problema recorrente durante a execução de algum dos robôs?" required />
+                  <textarea name="Contexto" placeholder="Fique à vontade para agregar informações adiconais" required></textarea>
+                  <input type="submit" value="Enviar" />
                 </div>
 
                 <div id="sustentacao" class="form-group" style="display: none;">
-                  <input type="text" name="Nome" placeholder="Seu nome (Sustentação)" required />
-                  <input type="email" name="Email" placeholder="Seu e-mail" required />
-                  <textarea name="Feedback" placeholder="Deixe seu feedback" required></textarea>
+                  <input type="text" name="Nome" placeholder="Nome" required />
+                  <input type="text" name="Sobrenome" placeholder="Sobrenome" required />
+                  <input type="email" name="E-mail" placeholder="E-mail" required />
+                  <input type="text" name="E-mail" placeholder="Em qual área deseja atuar?" required />
+                  <input type="text" name="E-mail" placeholder="Você já possui experiência nessa área ou deseja iniciar agora?" required />
+                  <textarea name="Feedback" placeholder="Fique à vontade para agregar informações adiconais" required></textarea>
+                  <input type="submit" value="Enviar" />
                 </div>
 
-             <div id="trabalhe-conosco" class="form-group" style="display: none;">
-              <input type="text" name="Nome" placeholder="Seu nome (Trabalhe Conosco)" required />
-              <input type="email" name="Email" placeholder="Seu e-mail" required />
-              
-              <!-- Adicionando uma margem inferior para espaçar -->
-              <label for="cvInput" id="fileLabel" style="margin-top: 15px;">Adicione um arquivo</label>
-              <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required />
-            </div>
+               <div id="trabalhe-conosco" class="form-group" style="display: none;">
+                <input type="text" name="Nome" placeholder="Nome" required />
+                <input type="text" name="Sobrenome" placeholder="Sobrenome" required />
+                <input type="email" name="E-mail" placeholder="E-mail" required />
+                <input type="text" name="E-mail" placeholder="Em qual área deseja atuar?" required />
+                <input type="text" name="E-mail" placeholder="Você já possui experiência nessa área ou deseja iniciar agora?" required />
+                <textarea name="Feedback" placeholder="Fique à vontade para agregar informações adiconais" required></textarea>
+                <!-- Adicionando uma margem inferior para espaçar -->
+                <label for="cvInput" id="fileLabel" style="margin-top: 15px;">Adicione um arquivo</label>
+                <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required />
+                <input type="submit" value="Enviar" />
+              </div>
 
 
                 <div class="btn-box">
@@ -453,21 +460,6 @@
       fileLabel.textContent = fileInput.files[0].name; // Mostra o nome do arquivo
     } else {
       fileLabel.textContent = 'Adicione um arquivo'; // Mostra o texto quando nenhum arquivo é selecionado
-    }
-  });
-</script>
-
-<script>
-  // Detecta mudanças na resposta da manutenção
-  document.getElementById('manutencao-anterior').addEventListener('change', function() {
-    var manutencao = this.value;
-    var ultimaManutencao = document.getElementById('ultima-manutencao');
-    
-    // Se "Sim" for selecionado, mostra o campo de data da última manutenção
-    if (manutencao-anterior === 'sim') {
-      ultimaManutencao.style.display = 'block';
-    } else {
-      ultimaManutencao.style.display = 'none';
     }
   });
 </script>
