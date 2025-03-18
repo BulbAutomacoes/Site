@@ -1,177 +1,125 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
-  <!-- Meta Tags -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Navbar</title>
 
-  <title>Bulb Automações</title>
+  <!-- Link do Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.css" />
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
-  <!-- Custom Styles -->
-  <link href="css/style.css" rel="stylesheet" />
-  <link href="css/responsive.css" rel="stylesheet" />
-
-  <!-- Pop-up Styles -->
   <style>
-    /* Fundo do pop-up */
-    .popup-overlay {
-      display: block;
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(211, 211, 211, 1);
-      z-index: 1000;
+    /* Reduzindo a altura da barra de navegação */
+    .header_section .header_top,
+    .header_section .header_bottom {
+      padding: 5px 0; /* Menos espaçamento superior e inferior */
     }
 
-    .hero_bg_box .img-box {
-        height: 10vh;  /* A altura será 50% da altura da tela */
-        background-size: cover;  /* Garante que a imagem de fundo cubra toda a área */
-        background-position: center; /* Centraliza a imagem */
-      }
-    .btn-box button {
-    border-radius: 3px;  /* Borda com 2px de arredondamento */
-    padding: 10px 20px;   /* Espaçamento interno do botão */
-    background-color: #ffffff;  /* Cor de fundo */
-    color: white;  /* Cor do texto */
-    font-size: 16px;  /* Tamanho da fonte */
-    cursor: pointer;  /* Cursor de mão ao passar por cima */
-    transition: background-color 0.3s;  /* Efeito de transição para a cor de fundo */
-  }
-
-  /* Efeito ao passar o mouse */
-  .btn-box button:hover {
-    background-color: #e60000;  /* Cor de fundo ao passar o mouse */
-  }
-    /* Estilo do pop-up */
-    .popup-content {
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: rgba(248, 244, 244, 0.9);
-      padding: 2rem;
-      box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
-      border-radius: 0.5rem;
-      z-index: 1001;
-      max-width: 90%;
-      width: 30rem;
-
-      /* Flexbox para centralizar o conteúdo */
-      display: flex;
-      flex-direction: column; /* Alinhar itens verticalmente */
-      align-items: center; /* Centralizar horizontalmente */
-      justify-content: center; /* Centralizar verticalmente */
-      gap: 1rem; /* Espaçamento entre itens */
+    /* Ajustando o tamanho da logo */
+    .header_section .header_top .icon {
+      height: 40px; /* Logo menor */
+      width: auto;
     }
 
-    /* Botão de fechar */
-    .close-btn {
-      align-self: flex-end;
-      cursor: pointer;
-      font-size: 3rem;
-      color: #555;
+    /* Reduzindo a altura da barra de navegação */
+    .navbar {
+      padding: 5px 0; /* Menos altura para a barra de navegação */
+      font-size: 0.9rem; /* Diminuindo o tamanho da fonte */
     }
 
-    /* Botão principal */
-    .btn-2 {
-      font-weight: 400;
-      font-size: 1.3rem;
-      display: inline-block;
-      padding: 1rem 1.5rem;
-      background-color: #FF0000;
-      color: #ffffff;
-      transition: all 0.3s;
-      border: 0.1rem solid transparent;
+    /* Ajustando os itens do menu */
+    .navbar-nav .nav-item {
+      padding: 0 10px; /* Menos espaçamento entre os itens do menu */
     }
 
-    .btn-2:hover {
-      background-color: transparent;
-      border-color: #FF0000;
-      color: #FF0000;
+    /* Reduzindo o tamanho do botão de navegação em telas pequenas */
+    .navbar-toggler {
+      padding: 5px; /* Menos espaçamento dentro do botão de navegação */
+      font-size: 1.2rem; /* Reduzir o tamanho da fonte do ícone */
     }
 
-    /* Adaptações responsivas para telas menores */
+    /* Reduzir a altura do botão de navegação quando for exibido */
+    .navbar-toggler-icon {
+      height: 20px; /* Menor tamanho do ícone */
+    }
+
+    /* Ajustando o título da barra */
+    .header_section .contact_link2 .navbar-brand {
+      font-size: 1.1rem; /* Font menor para o título */
+    }
+
+    /* Melhorar responsividade */
     @media (max-width: 768px) {
-      .popup-content {
-        width: 90%;
-        padding: 1.5rem;
+      .navbar {
+        padding: 4px 0; /* Ajustar o padding para dispositivos móveis */
       }
 
-      .btn-2 {
-        font-size: 1.1rem;
-        padding: 0.8rem 1.2rem;
-      }
-
-    }
-
-    @media (max-width: 480px) {
-      .popup-content {
-        padding: 1rem;
-      }
-
-      .close-btn {
-        font-size: 2.5rem;
+      .navbar-nav .nav-item {
+        padding: 0 8px; /* Ajuste do espaçamento entre os itens do menu em dispositivos móveis */
       }
     }
- /* Estilo para o botão de upload */
-    #fileLabel {
-      display: inline-block;
-      background-color: #333; /* Fundo cinza escuro */
-      color: #fff; /* Texto branco */
-      padding: 10px 20px;
-      border-radius: 3px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease; /* Transição suave para a mudança de cor */
-    }
-
-    /* Efeito ao passar o mouse */
-    #fileLabel:hover {
-      background-color: #555; /* Fundo cinza claro */
-    }
-
-    /* Remover o botão de arquivo real */
-    #cvInput {
-      display: none;
-    }
-
-    /* Estilo para o formulário */
-    .form-group {
-      margin: 20px 0;
-    }
-
-    input[type="text"], input[type="email"], input[type="phone"], textarea{
-      width: 100%;
-      padding: 10px;
-      margin: 5px 0;
-      border: 1.2px solid #ccc;
-      border-radius: 2px;
-      font-color: #000;
-    }
-
-  /* Responsividade geral */
-  @media (max-width: 600px) {
-    select, input[type="text"] {
-      font-size: 14px;  /* Ajusta o tamanho da fonte para telas pequenas */
-      padding: 8px;     /* Ajusta o preenchimento */
-    }
-  }
   </style>
+
 </head>
 
 <body>
+  <div class="header_section">
+    <!-- Barra superior -->
+    <div class="header_top">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6">
+            <a href="#" class="contact_link1">
+              <i class="fas fa-phone-alt"></i> (11) 99999-9999
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a href="#" class="contact_link2">
+              <i class="fas fa-envelope"></i> contato@empresa.com.br
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Barra de navegação -->
+    <div class="header_bottom">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand" href="#">Minha Empresa</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Sobre</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Serviços</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Contato</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <!-- Link do Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>
 
   <div class="hero_area">
     <div class="hero_bg_box">
