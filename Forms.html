@@ -252,7 +252,7 @@
           <div class="col-md-7 mx-auto">
             <form id="contactForm" action="https://formspree.io/f/mqaeddev" method="POST" enctype="multipart/form-data">
               <div class="contact_form-container">
-
+        
                 <div id="quero-automatizar" class="form-group" style="display: none;">
                   <input type="text" name="Nome" placeholder="Nome" required />
                   <input type="text" name="Sobrenome" placeholder="Sobrenome" required />
@@ -261,11 +261,14 @@
                   <input type="email" name="E-mail" placeholder="E-mail" required />
                   <input type="phone" name="Telefone" placeholder="Telefone" required />
                   <input type="text" name="Maior dor" placeholder="Qual a maior dor que sua empresa deseja resolver nas operações?" required/>
-                  <select name="Interesse" required>
-                    <option value="">Selecione uma opção</option>
+                  
+                  <!-- Ajustado o campo select para manter o mesmo estilo dos inputs -->
+                  <select name="Interesse" class="form-control" required>
+                    <option value="">Sua empresa já possui automações personalizadas atualmente?</option>
                     <option value="Sim">Sim</option>
                     <option value="Não">Não</option>
                   </select>
+                  
                   <input type="text" name="Quantidade" placeholder="Quantos processos estima automatizar?" required/>
                   <input type="text" name="Prazo Início" placeholder="Qual o prazo que sua empresa tem para iniciar o projeto de automatização?" />
                   <input type="text" name="Prazo Fim" placeholder="Quando planejam concluír esse projeto?" />
