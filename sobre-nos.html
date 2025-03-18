@@ -1,127 +1,125 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Navbar</title>
-
-  <!-- Link do Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
+  <!--Style popup-->
   <style>
-    /* Reduzindo a altura da barra de navegação */
-    .header_section .header_top,
-    .header_section .header_bottom {
-      padding: 5px 0; /* Menos espaçamento superior e inferior */
-    }
-
-    /* Ajustando o tamanho da logo */
-    .header_section .header_top .icon {
-      height: 40px; /* Logo menor */
-      width: auto;
-    }
-
-    /* Reduzindo a altura da barra de navegação */
-    .navbar {
-      padding: 5px 0; /* Menos altura para a barra de navegação */
-      font-size: 0.9rem; /* Diminuindo o tamanho da fonte */
-    }
-
-    /* Ajustando os itens do menu */
-    .navbar-nav .nav-item {
-      padding: 0 10px; /* Menos espaçamento entre os itens do menu */
-    }
-
-    /* Reduzindo o tamanho do botão de navegação em telas pequenas */
-    .navbar-toggler {
-      padding: 5px; /* Menos espaçamento dentro do botão de navegação */
-      font-size: 1.2rem; /* Reduzir o tamanho da fonte do ícone */
-    }
-
-    /* Reduzir a altura do botão de navegação quando for exibido */
-    .navbar-toggler-icon {
-      height: 20px; /* Menor tamanho do ícone */
-    }
-
-    /* Ajustando o título da barra */
-    .header_section .contact_link2 .navbar-brand {
-      font-size: 1.1rem; /* Font menor para o título */
-    }
-
-    /* Melhorar responsividade */
-    @media (max-width: 768px) {
-      .navbar {
-        padding: 4px 0; /* Ajustar o padding para dispositivos móveis */
+      /* Fundo do pop-up */
+      .popup-overlay {
+          display: block;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5);
+          z-index: 1000;
       }
 
-      .navbar-nav .nav-item {
-        padding: 0 8px; /* Ajuste do espaçamento entre os itens do menu em dispositivos móveis */
+      /* Estilo do pop-up */
+      .popup-content {
+          position: fixed;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(248, 244, 244, 0.9);
+          padding: 2rem;
+          box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.2);
+          border-radius: 0.5rem;
+          z-index: 1001;
+          max-width: 90%;
+          width: 30rem;
+
+          /* Flexbox para centralizar o conteúdo */
+          display: flex;
+          flex-direction: column; /* Alinhar itens verticalmente */
+          align-items: center; /* Centralizar horizontalmente */
+          justify-content: center; /* Centralizar verticalmente */
+          gap: 1rem; /* Espaçamento entre itens */
       }
-    }
+
+      /* Botão de fechar */
+      .close-btn {
+          align-self: flex-end; /* Alinhar botão de fechar à direita */
+          cursor: pointer;
+          font-size: 3rem;
+          color: #555;
+      }
+
+      /* Botão principal */
+      .btn-2 {
+          font-weight: 400;
+          font-size: 1.3rem;
+          display: inline-block;
+          padding: 1rem 1.5rem;
+          background-color: #FF0000;
+          color: #ffffff;
+          transition: all 0.3s;
+          border: 0.1rem solid transparent;
+      }
+
+      .btn-2:hover {
+          background-color: transparent;
+          border-color: #FF0000;
+          color: #FF0000;
+      }
+
+      /* Adaptações responsivas para telas menores */
+      @media (max-width: 768px) {
+          .popup-content {
+              width: 90%;
+              padding: 1.5rem;
+          }
+
+          .btn-2 {
+              font-size: 1.1rem;
+              padding: 0.8rem 1.2rem;
+          }
+          
+      }
+
+      @media (max-width: 480px) {
+          .popup-content {
+              padding: 1rem;
+          }
+
+          .close-btn {
+              font-size: 2.5rem;
+          }
+      }
+
   </style>
+  
+  <!--Style popup fim-->
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
 
+  <title>Bulb Automações - Sobre</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,600,700&display=swap" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
 </head>
 
-<body>
-  <div class="header_section">
-    <!-- Barra superior -->
-    <div class="header_top">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-6">
-            <a href="#" class="contact_link1">
-              <i class="fas fa-phone-alt"></i> (11) 99999-9999
-            </a>
-          </div>
-          <div class="col-md-6">
-            <a href="#" class="contact_link2">
-              <i class="fas fa-envelope"></i> contato@empresa.com.br
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Barra de navegação -->
-    <div class="header_bottom">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand" href="#">Minha Empresa</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Sobre</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Serviços</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Contato</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
-    </div>
-  </div>
-
-  <!-- Link do Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
-</body>
-
-</html>
+<body class="sub_page">
 
   <div class="hero_area">
+    <!-- header section strats -->
     <div class="hero_bg_box">
       <div class="img-box">
         <img src="images/hero-bg.jpeg" alt="">
@@ -129,78 +127,80 @@
     </div>
 
     <header class="header_section">
-      <div class="header_top">
-        <div class="container-fluid">
-          <div class="contact_link-container">
-            <a href="index.html" class="contact_link1">
-              <img src="images/Logo2.png" alt="Ícone" class="icon">
-            </a>
-            <a class="contact_link2">
-              <span class="navbar-brand" style="color: #FF0000; text-align:center; margin-left: 10%">
-                Se o seu desejo é tecnologia, nós realizamos
-              </span>
-            </a>
-            <a href="mailto:contato@bulbautomacoes.com.br?subject=Quero%20Automatizar" class="contact_link3">
-              <i class="fa fa-envelope" aria-hidden="true"></i>
-              <span>
-                contato@bulbautomacoes.com.br
-              </span>
-            </a>
-          </div>
-        </div>
+  <div class="header_top">
+    <div class="container-fluid">
+      <div class="contact_link-container">
+        <a href="index.html" class="contact_link1">
+          <img src="images/Logo2.png" alt="Ícone" class="icon">
+        </a>
+        <a class="contact_link2">
+          <span class="navbar-brand" style="color: #FF0000; text-align:center; margin-left: 10%">
+            Se o seu desejo é tecnologia, nós realizamos
+          </span>
+        </a>
+        <a href="mailto:contato@bulbautomacoes.com.br?subject=Quero%20Automatizar" class="contact_link3">
+          <i class="fa fa-envelope" aria-hidden="true"></i>
+          <span>
+            contato@bulbautomacoes.com.br
+          </span>
+        </a>
       </div>
+    </div>
+  </div>
+  <div class="header_bottom">
+    <div class="container-fluid" style="height: 50%">
+      <nav class="navbar navbar-expand-lg custom_nav-container">
+        <a class="navbar-brand" href="index.html"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class=""></span>
+        </button>
 
-      <div class="header_bottom">
-        <div class="container-fluid">
-          <nav class="navbar navbar-expand-lg custom_nav-container">
-            <a class="navbar-brand" href="index.html"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class=""></span>
-            </button>
-
-            <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link" href="index.html">Home  <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="sobre-nos.html">Sobre Nós</a>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Serviços
-                  </a>
-                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown" 
-                      style="background-color: #1c1c1c !important; backdrop-filter: blur(10px);">
-                    <li><a class="dropdown-item" href="LadinPages/automacao-de-processos-virtuais.html" 
-                           style="color: white !important; padding: 10px; display: block; background-color: #1c1c1c !important;"
-                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
-                           onmouseout="this.style.background='#1c1c1c'">Automação de processos virtuais</a></li>
-                    <li><a class="dropdown-item" href="LadinPages/robos-como-servico.html" 
-                           style="color: white !important; padding: 10px; display: block; background-color: #1c1c1c !important;"
-                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
-                           onmouseout="this.style.background='#1c1c1c'">Robôs como serviço</a></li>
-                    <li><a class="dropdown-item" href="LadinPages/suporte-&-sustentacao.html" 
-                           style="color: white !important; padding: 10px; display: block; background-color: #1c1c1c !important;"
-                           onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
-                           onmouseout="this.style.background='#1c1c1c'">Suporte e Sustentação</a></li>
-                  </ul>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="parceiros.html">Seja Parceiro</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="/Site/Forms.html?form=trabalhe-conosco">Trabalhe Conosco</a>
-                </li>
-                <li class="nav-item" style="background-color: red;">
-                  <a class="nav-link" href="https://wa.me/5511948798009?text=Olá,%20Bulb!%20Desejo%20automatizar%20processos.">Quero Automatizar</a>
-                </li>
+        <div class="collapse navbar-collapse ml-auto" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="sobre-nos.html"> Sobre Nós <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Serviços
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown" 
+                  style="background-color: #1c1c1c !important; backdrop-filter: blur(10px);">
+                <li><a class="dropdown-item" href="LadinPages/automacao-de-processos-virtuais.html" 
+                       style="color: white !important; padding: 8px 12px; display: block; background-color: #1c1c1c !important;"
+                       onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
+                       onmouseout="this.style.background='#1c1c1c'">Automação de processos virtuais</a></li>
+                <li><a class="dropdown-item" href="LadinPages/robos-como-servico.html" 
+                       style="color: white !important; padding: 8px 12px; display: block; background-color: #1c1c1c !important;"
+                       onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
+                       onmouseout="this.style.background='#1c1c1c'">Robôs como serviço</a></li>
+                <li><a class="dropdown-item" href="LadinPages/suporte-&-sustentacao.html" 
+                       style="color: white !important; padding: 8px 12px; display: block; background-color: #1c1c1c !important;"
+                       onmouseover="this.style.background='rgba(0, 0, 0, 0.5)'" 
+                       onmouseout="this.style.background='#1c1c1c'">Suporte e Sustentação</a></li>
               </ul>
-            </div>
-          </nav>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="parceiros.html"> Seja Parceiro</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Forms.html?form=trabalhe-conosco"> Trabalhe Conosco</a>
+            </li>
+            <li class="nav-item" style="background-color: red;">
+              <a class="nav-link" href="https://wa.me/5511948798009?text=Olá,%20Bulb!%20Desejo%20automatizar%20processos."> Quero Automatizar</a>
+            </li>
+          </ul>
         </div>
-      </div>
-    </header>
+        
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>            
+      </nav>
+    </div>
+  </div>
+
+</header>
     <!-- end header section -->
      
     
