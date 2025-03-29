@@ -269,22 +269,24 @@
             <form id="contactForm" action="https://formspree.io/f/xldjlwon" method="POST" enctype="multipart/form-data">
               <div class="contact_form-container">
         
-                
 
-               
-                <input type="text" name="Nome" placeholder="Nome" required />
-                <input type="text" name="Sobrenome" placeholder="Sobrenome" required />
-                <input type="text" name="E-mail" placeholder="E-mail" required />
-                <input type="text" name="Área" placeholder="Em qual área deseja atuar?" required />
-                <textarea name="Experiência" placeholder="Nos conte um pouco a respeito das suas experiências e áreas de atuação" required style="margin-top: 15px;"></textarea>
-                <textarea name="Contexto" placeholder="Nos fale a respeito de você, como pessoa e como profissional" required style="margin-top: 15px;"></textarea>
-                <!-- Adicionando uma margem inferior para espaçar -->
-               <label for="cvInput" id="fileLabel" style="margin-top: 15px;">Anexe seu currículo</label> 
-               <input type="file" name="CV" id="cvInput" accept=".pdf,.doc,.docx" required /> 
-               
+                <input type="text" name="Nome e Sobrenome" placeholder="Nome e Sobrenome" required />
+                  <input type="text" name="E-mail" placeholder="E-mail" required />
+                  <input type="text" name="Telefone" placeholder="Telefone" />
+                  <style>
+                    input, textarea {
+                        font-size: 14px; /* Defina o tamanho de fonte que preferir */
+                      }
+                    textarea::placeholder {
+                      color: black !important; /* Força a cor preta no placeholder */
+                    }
+                  </style>
+                  <textarea name="Problema a resolver" placeholder="Em qual área deseja atuar?" style="margin-top: 15px; color: black; border: none;"></textarea>
+                  <textarea name="Já possui automação?" placeholder="Nos conte um pouco a respeito das suas experiências e áreas de atuação" style="margin-top: 18px; color: black; border: none;"></textarea>
+                  <textarea name="Informações adicionais" placeholder="Nos fale a respeito de você, como pessoa e como profissional" style="margin-top: 18px; color: black; border: none;"></textarea>
+
                   <div class="informative-box2" style="margin-top: 18px;">
-                     Envie seu currículo
-                     <a href="mailto:contato@bulbautomacoes.com.br?subject=Quero%20Automatizar">Clique aqui para entrar em contato</a>
+                     <a href="mailto:contato@bulbautomacoes.com.br?subject=Quero%20Automatizar">Envie seu currículo</a>
                   </div>
 
 
