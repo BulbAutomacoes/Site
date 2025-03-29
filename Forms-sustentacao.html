@@ -164,6 +164,26 @@
     }
   }
 
+
+.informative-box {
+    padding: 15px;
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 2px; /* Borda arredondada */
+    color: #008000; /* Cor do texto verde mais vivo */
+    font-size: 14px;
+    margin-bottom: 15px; /* Espaçamento abaixo */
+    text-align: center; /* Centraliza o texto */
+}
+
+.informative-box2 {
+    padding: 12px;
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 2px; /* Borda arredondada */
+    color: #008000; /* Cor do texto verde mais vivo */
+    font-size: 14px;
+    margin-bottom: 15px; /* Espaçamento abaixo */
+    text-align: center; /* Centraliza o texto */
+}
   </style>
 </head>
 
@@ -260,36 +280,32 @@
               <div class="contact_form-container">
         
                 
-
-                
-                  <input type="text" name="Nome" placeholder="Nome" required />
-                  <input type="text" name="Sobrenome" placeholder="Sobrenome" required />
+                 <div class="informative-box">
+                    Solicitamos essas informações somente para iniciarmos o entendimento sobre o seu cenário atual e assim podermos fazer um orçamento adequado
+                 </div>
+             
+                  <input type="text" name="Nome e Sobrenome" placeholder="Nome e Sobrenome" required />
                   <input type="text" name="Empresa" placeholder="Empresa" required />
                   <input type="text" name="Cargo" placeholder="Cargo" required />
                   <input type="text" name="E-mail" placeholder="E-mail" required />
-                  <input type="text" name="Telefone" placeholder="Telefone" required />
-                  <textarea name="Quantidade" placeholder="Quantos robôs personalizados sua empresa possui?" required ></textarea>
-                  <textarea name="Tempo" placeholder="A quanto tempo em média os robôs foram desenvolvidos?" required ></textarea>
-                  <textarea name="Última Manutenção" placeholder="Alguma empresa especializada já prestou serviço de sustentação para esses robôs?" required ></textarea>
-                  <textarea name="Identificação" placeholder="Ocorre algum problema recorrente durante a execução de algum dos robôs?" required ></textarea>
-                  <textarea name="Identificação1" placeholder="Sua empresa deseja receber sustentação especializada para todos os robôs?" required ></textarea>
+                  <input type="text" name="Telefone" placeholder="Telefone" />
+                  <input type="text" name="E-mail dos demais envolvidos no projeto (se houver)" placeholder="E-mail dos demais envolvidos no projeto (se houver)"/>
                   <style>
-                    textarea {
-                      height: 62px !important; /* Define a altura do textarea */
-                      line-height: 20px;       /* Definindo a altura da linha */
-                      padding-left: 15px;      /* Margem à esquerda do texto */
-                      font-size: 0.9rem;       /* Tamanho da fonte */
-                    }
-                  
+                    input, textarea {
+                        font-size: 14px; /* Defina o tamanho de fonte que preferir */
+                      }
                     textarea::placeholder {
-                      color: black;            /* Cor do placeholder */
-                      font-size: 0.9rem;       /* Tamanho da fonte do placeholder */
+                      color: black !important; /* Força a cor preta no placeholder */
                     }
                   </style>
-                  <textarea name="Contexto" placeholder="Fique à vontade para agregar informações adicionais" required ></textarea>
-                
+                  <textarea name="Problema a resolver" placeholder="Deseja sustentação especializada sob quantos processos automatizados?" style="margin-top: 15px; color: black; border: none;"></textarea>
+                  <textarea name="Já possui automação?" placeholder="Seus processos automatizados já receberam sustentação personalizada anteriormente?" style="margin-top: 18px; color: black; border: none;"></textarea>
+                  <textarea name="Informações adicionais" placeholder="Conte-nos um pouco sobre o que espera de uma sustentação especializada" style="margin-top: 18px; color: black; border: none;"></textarea>
 
-               
+                  
+                  <div class="informative-box2" style="margin-top: 18px;">
+                      Após enviar, fique à vontade para atualizar ou fechar a página
+                  </div>
 
 
                 <div class="btn-box">
