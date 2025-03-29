@@ -164,6 +164,25 @@
     }
   }
 
+.informative-box {
+    padding: 15px;
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 2px; /* Borda arredondada */
+    color: #008000; /* Cor do texto verde mais vivo */
+    font-size: 14px;
+    margin-bottom: 15px; /* Espaçamento abaixo */
+    text-align: center; /* Centraliza o texto */
+}
+
+.informative-box2 {
+    padding: 12px;
+    background-color: #ffffff; /* Fundo branco */
+    border-radius: 2px; /* Borda arredondada */
+    color: #008000; /* Cor do texto verde mais vivo */
+    font-size: 14px;
+    margin-bottom: 15px; /* Espaçamento abaixo */
+    text-align: center; /* Centraliza o texto */
+}
   </style>
 </head>
 
@@ -259,28 +278,33 @@
             <form id="contactForm" action="https://formspree.io/f/xblgkaar" method="POST" enctype="multipart/form-data">
               <div class="contact_form-container">
         
-                
 
-
-                
-                
-                
-                
-                  <input type="text" name="Nome" placeholder="Nome" required />
-                  <input type="text" name="Sobrenome" placeholder="Sobrenome" required />
+                 <div class="informative-box">
+                    Solicitamos essas informações somente para iniciarmos o entendimento sobre o seu cenário atual e assim podermos fazer um orçamento adequado
+                 </div>
+             
+                  <input type="text" name="Nome e Sobrenome" placeholder="Nome e Sobrenome" required />
                   <input type="text" name="Empresa" placeholder="Empresa" required />
                   <input type="text" name="Cargo" placeholder="Cargo" required />
                   <input type="text" name="E-mail" placeholder="E-mail" required />
-                  <input type="text" name="Telefone" placeholder="Telefone" required />
-                  <input type="text" name="Maior dor" placeholder="Qual a maior dor que sua empresa deseja resolver nas operações?" required/>
-                  <input type="text" name="Interesse" placeholder="Sua empresa já possui automações personalizadas atualmente?" required/>
-                  <input type="text" name="Prazo Início" placeholder="Qual o prazo que sua empresa tem para iniciar o projeto de automatização?" />
-                  <input type="text" name="Prazo Fim" placeholder="Quando planejam concluír esse projeto?" />
-                  <input type="text" name="Complemento" placeholder="Se houver mais pessoas envolvidas no projeto, por favor, informe os e-mails" />
-                  <textarea name="Contexto" placeholder="Fique à vontade para agregar informações adicionais" required style="margin-top: 15px;"></textarea>
-               
+                  <input type="text" name="Telefone" placeholder="Telefone" />
+                  <input type="text" name="E-mail dos demais envolvidos no projeto (se houver)" placeholder="E-mail dos demais envolvidos no projeto (se houver)"/>
+                  <style>
+                    input, textarea {
+                        font-size: 14px; /* Defina o tamanho de fonte que preferir */
+                      }
+                    textarea::placeholder {
+                      color: black !important; /* Força a cor preta no placeholder */
+                    }
+                  </style>
+                  <textarea name="Problema a resolver" placeholder="Qual o maior problema que sua empresa deseja resolver com automações?" style="margin-top: 15px; color: black; border: none;"></textarea>
+                  <textarea name="Já possui automação?" placeholder="Sua empresa já possui automações personalizadas atualmente?" style="margin-top: 18px; color: black; border: none;"></textarea>
+                  <textarea name="Informações adicionais" placeholder="Informações adicionais. Isso pode nos ajudar a te apresentar a solução ideal para você" style="margin-top: 18px; color: black; border: none;"></textarea>
 
-               
+                  
+                  <div class="informative-box2" style="margin-top: 18px;">
+                      Após enviar, fique à vontade para atualizar ou fechar a página
+                  </div>
 
 
                 <div class="btn-box">
