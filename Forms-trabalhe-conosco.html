@@ -268,12 +268,13 @@
             <form id="contactForm" action="https://formspree.io/f/xldjlwon" method="POST">
               <div class="contact_form-container">
   
-                <input type="text" name="Nome e Sobrenome" placeholder="Nome e Sobrenome" required />
-                <input type="email" name="E-mail" placeholder="E-mail" required />
-                <input type="text" name="Telefone" placeholder="Telefone" />
-                <textarea name="Área de Interesse" placeholder="Em qual área deseja atuar?" required></textarea>
-                <textarea name="Experiência" placeholder="Nos conte um pouco sobre suas experiências e áreas de atuação" required></textarea>
-                <textarea name="Informações adicionais" placeholder="Fale sobre você, como pessoa e profissional" required></textarea>
+                  <input type="text" name="Nome e Sobrenome" placeholder="Nome e Sobrenome" required />
+                  <input type="text" name="Empresa" placeholder="Empresa" required />
+                  <input type="text" name="Cargo" placeholder="Cargo" required />
+                  <input type="text" name="Departamento" placeholder="Departamento" required />
+                  <input type="text" name="E-mail" placeholder="E-mail" required />
+                  <input type="text" name="Telefone" placeholder="Telefone" />
+                  <input type="text" name="E-mail dos demais responsáveis pelo projeto (se houver)" placeholder="E-mail dos demais responsáveis pelo projeto (se houver)"/>
                   <style>
                     input, textarea {
                         font-size: 14px; /* Defina o tamanho de fonte que preferir */
@@ -285,16 +286,16 @@
                   <textarea name="Problema a resolver" placeholder="Quantos processos automatizados precisam de manutenção?" style="margin-top: 15px; color: black; border: none;"></textarea>
                   <textarea name="Informações adicionais" placeholder="Conte-nos um pouco do que já sabe sobre o(s) problema(s)" style="margin-top: 18px; color: black; border: none;"></textarea>
                   
-                <!-- Upload e campo oculto -->
-                <div class="form-group">
-                  <label id="fileLabel" for="cvInput">Anexar Currículo</label>
-                  <input type="file" id="cvInput" accept=".pdf,.doc,.docx" />
-                  <input type="hidden" name="arquivo_base64" id="arquivoBase64" />
-                </div>
-  
-                <div class="informative-box2">
-                  Entraremos em contato caso haja uma vaga disponível para o seu perfil
-                </div>
+                  <!-- Upload e campo oculto -->
+                  <div class="form-group">
+                    <label id="fileLabel" for="cvInput">Anexar Currículo</label>
+                    <input type="file" id="cvInput" accept=".pdf,.doc,.docx" />
+                    <input type="hidden" name="arquivo_base64" id="arquivoBase64" />
+                  </div>
+    
+                  <div class="informative-box2">
+                    Entraremos em contato caso haja uma vaga disponível para o seu perfil
+                  </div>
   
                 <div class="btn-box">
                   <button type="submit">Enviar</button>
